@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *midView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
