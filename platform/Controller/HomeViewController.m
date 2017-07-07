@@ -7,8 +7,14 @@
 //
 
 #import "HomeViewController.h"
+#import "RFLayout.h"
+#import "HomeCollectionCell.h"
+static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 
-@interface HomeViewController ()<SDCycleScrollViewDelegate>
+@interface HomeViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate>{
+    NSArray *_topBannerArray;
+    NSArray *_hotSaleArray;
+}
 
 @end
 
@@ -17,13 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.headerView setBackgroundColor:[UIColor clearColor]];
-    NSArray *imageNames = @[@"topBanner1.jpg",@"topBanner2.jpg"];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.headerView.frame.size.height) shouldInfiniteLoop:YES imageNamesGroup:imageNames];
+    
+    //headerView
+    _topBannerArray = @[@"topBanner1.jpg",@"topBanner2.jpg"];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.headerView.frame.size.height) shouldInfiniteLoop:YES imageNamesGroup:_topBannerArray];
     cycleScrollView.delegate = self;
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-    [self.headerView addSubview:cycleScrollView];
     cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self.headerView addSubview:cycleScrollView];
+    [self.headerView setBackgroundColor:[UIColor clearColor]];
+    
+    //collectionView
+    _hotSaleArray = @[@"hotSale1.jpg",@"hotSale2.jpg"];
+    [self.collectionView registerNib:[UINib nibWithNibName:homeCollectionCellIdentifier bundle:nil] forCellWithReuseIdentifier:homeCollectionCellIdentifier];
+    self.collectionView.collectionViewLayout = [[RFLayout alloc] init];
+    self.collectionView.backgroundColor = [UIColor clearColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -40,7 +54,6 @@
 }
 
 #pragma mark - SDCycleScrollViewDelegate
-
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"---点击了第%ld张图片", (long)index);
@@ -48,6 +61,18 @@
 //    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
 
+#pragma mark SDCycleScrollViewDelegate
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return _hotSaleArray.count;
+}
+
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCollectionCellIdentifier forIndexPath:indexPath];
+    cell.imageView.image = [UIImage imageNamed:[_hotSaleArray objectAtIndex:indexPath.row]];
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
