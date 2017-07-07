@@ -7,4 +7,5 @@ target 'platform' do
     pod 'IQKeyboardManager'
     pod 'MBProgressHUD'
     pod 'Toast'
+    pod 'SDCycleScrollView', '~> 1.66'
 end

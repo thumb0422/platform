@@ -7,6 +7,11 @@ PODS:
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
+  - SDCycleScrollView (1.66):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - Toast (3.1.0)
 
 DEPENDENCIES:
@@ -14,6 +19,7 @@ DEPENDENCIES:
   - Mantle
   - MBProgressHUD
   - Realm
+  - SDCycleScrollView (~> 1.66)
   - Toast
 
 SPEC CHECKSUMS:
@@ -21,8 +27,10 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: 7ec1a4814d3036e068eab6ff3edac7075c4cdf64
+PODFILE CHECKSUM: 3f6eef1bd1607b3467f4e4d69855a85666531732
 
-COCOAPODS: 1.3.0.beta.2
+COCOAPODS: 1.2.1
