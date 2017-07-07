@@ -9,7 +9,7 @@
 #import "RFLayout.h"
 
 #define ACTIVE_DISTANCE 200
-#define ZOOM_FACTOR 0.1
+#define ZOOM_FACTOR 0.2
 #define kScreen_Height      ([UIScreen mainScreen].bounds.size.height)
 #define kScreen_Width       ([UIScreen mainScreen].bounds.size.width)
 
@@ -22,7 +22,7 @@
     if (self) {
         self.itemSize = CGSizeMake(250, 350);
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        self.minimumLineSpacing = 15;
+        self.minimumLineSpacing = 10;
         self.sectionInset = UIEdgeInsetsMake(64, 35, 0, 35);
     }
     return self;

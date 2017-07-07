@@ -34,10 +34,11 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
     [self.headerView setBackgroundColor:[UIColor clearColor]];
     
     //collectionView
-    _hotSaleArray = @[@"hotSale1.jpg",@"hotSale2.jpg"];
-    [self.collectionView registerNib:[UINib nibWithNibName:homeCollectionCellIdentifier bundle:nil] forCellWithReuseIdentifier:homeCollectionCellIdentifier];
-    self.collectionView.collectionViewLayout = [[RFLayout alloc] init];
-    self.collectionView.backgroundColor = [UIColor clearColor];
+    _hotSaleArray = @[@"hotSale1.jpg",@"hotSale2.jpg",@"hotSale1.jpg",@"hotSale2.jpg",@"hotSale1.jpg",@"hotSale2.jpg"];
+    [self.headerCollectionView registerNib:[UINib nibWithNibName:homeCollectionCellIdentifier bundle:nil] forCellWithReuseIdentifier:homeCollectionCellIdentifier];
+    self.headerCollectionView.collectionViewLayout = [[RFLayout alloc] init];
+    self.headerCollectionView.backgroundColor = [UIColor clearColor];
+    self.headerCollectionView.tag = 1001;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -61,7 +62,7 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 //    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
 
-#pragma mark SDCycleScrollViewDelegate
+#pragma mark UICollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return _hotSaleArray.count;
