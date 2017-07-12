@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        self.itemSize = CGSizeMake(250, 350);
+        self.itemSize = CGSizeMake(300, 350);
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.minimumLineSpacing = 10;
         self.sectionInset = UIEdgeInsetsMake(64, 35, 0, 35);
