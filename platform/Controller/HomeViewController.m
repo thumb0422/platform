@@ -11,7 +11,7 @@
 #import "HomeCollectionCell.h"
 static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 
-@interface HomeViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate>{
+@interface HomeViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSArray *_topBannerArray;
     NSArray *_hotSaleArray;
 }
@@ -84,4 +84,43 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 }
 */
 
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 44;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *footerView = [[UIView alloc] init];
+    [footerView setBackgroundColor:[UIColor yellowColor]];
+    return footerView;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc] init];
+    [headerView setBackgroundColor:[UIColor greenColor]];
+    return headerView;
+}
+
+#pragma mark UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.backgroundColor = [UIColor redColor];
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
 @end

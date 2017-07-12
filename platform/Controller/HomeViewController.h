@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *headerCollectionView;
 @property (weak, nonatomic) IBOutlet UIView *midView;
-
+@property (weak, nonatomic) IBOutlet UITableView *midTableView;
 
 @end
