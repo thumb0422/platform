@@ -25,6 +25,7 @@
 		9AACF4651F1A26D900054505 /* HomeCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4631F1A26D900054505 /* HomeCollectionTableViewCell.xib */; };
 		9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF49F1F1A5C8200054505 /* UIView+Utils.m */; };
 		9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */; };
+		9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4A51F1B266B00054505 /* ProductInfoModel.m */; };
 		9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */; };
 		9AC8CA951F007F1300E11E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA931F007F1300E11E3C /* Main.storyboard */; };
 		9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA961F007F1300E11E3C /* Assets.xcassets */; };
@@ -66,6 +67,8 @@
 		9AACF49F1F1A5C8200054505 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		9AACF4A11F1A5D7C00054505 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		9AACF4A41F1B266B00054505 /* ProductInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoModel.h; sourceTree = "<group>"; };
+		9AACF4A51F1B266B00054505 /* ProductInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoModel.m; sourceTree = "<group>"; };
 		9AC8CA871F007F1300E11E3C /* platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = platform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC8CA8A1F007F1300E11E3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 		9A1F5BA61F01D37D00525E5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AACF4A41F1B266B00054505 /* ProductInfoModel.h */,
+				9AACF4A51F1B266B00054505 /* ProductInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,9 +178,9 @@
 		9AACF4661F1A531B00054505 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				9AACF4671F1A533600054505 /* Utility.h */,
 				9AACF49E1F1A5C8200054505 /* UIView+Utils.h */,
 				9AACF49F1F1A5C8200054505 /* UIView+Utils.m */,
-				9AACF4671F1A533600054505 /* Utility.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
+				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,

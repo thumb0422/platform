@@ -9,12 +9,14 @@
 #import "HomeViewController.h"
 
 #import "HomeHeaderCell.h"
+#import "BaseTableViewCell.h"
 #import "HomeCollectionTableViewCell.h"
 #import "HomeImageTableViewCell.h"
 #import "HomeTopBottomTableViewCell.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_identifyArray;
+    NSArray *_rowHeightArray;
 }
 
 @end
@@ -27,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _rowHeightArray = @[[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:400],[NSNumber numberWithInteger:200]];
     _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell"];
     [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
@@ -35,12 +38,10 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,24 +61,44 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identify = [_identifyArray objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
+    __block ProductInfoModel *dataModel = nil;
     switch (indexPath.row) {
         case 0:
             cell = (HomeHeaderCell *)cell;
+            cell.cellClickBlock = ^(ProductInfoModel *data) {
+                dataModel = data;
+            };
             break;
         case 1:
             cell = (HomeCollectionTableViewCell *)cell;
+            cell.cellClickBlock = ^(ProductInfoModel *data) {
+                dataModel = data;
+            };
             break;
         case 2:
             cell = (HomeImageTableViewCell *)cell;
             cell.imageView.image = [UIImage imageNamed:@"topBanner2.jpg"];
+            cell.cellClickBlock = ^(ProductInfoModel *data) {
+                dataModel = data;
+            };
             break;
         case 3:
-            cell = (HomeTopBottomTableViewCell *)cell;
+            {
+                HomeTopBottomTableViewCell *tmpCell = (HomeTopBottomTableViewCell *)cell;
+                tmpCell.imageArray = @[@"hotSale1.png",@"hotSale2.png",@"hotSale3.png"];
+                tmpCell.cellClickBlock = ^(ProductInfoModel *data) {
+                    dataModel = data;
+                };
+                return tmpCell;
+            }
             break;
         case 4:
             cell = (HomeImageTableViewCell *)cell;
             cell.imageView.image = [UIImage imageNamed:@"midBanner.png"];
+            cell.cellClickBlock = ^(ProductInfoModel *data) {
+                dataModel = data;
+            };
             break;
             
         default:
@@ -89,12 +110,14 @@
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200.0f;
+    return [[_rowHeightArray objectAtIndex:indexPath.row] integerValue];
 }
 
+/*点击事件在 cellForRowAtIndexPath.block 中，此处不处理
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
+*/
 /*
 #pragma mark - Navigation
 

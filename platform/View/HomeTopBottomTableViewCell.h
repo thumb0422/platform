@@ -10,4 +10,5 @@
 
 @interface HomeTopBottomTableViewCell : BaseTableViewCell
 
+@property(nonatomic,copy) NSArray *imageArray;
 @end

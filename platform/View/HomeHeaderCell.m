@@ -29,6 +29,14 @@
     
 }
 
+#pragma mark SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    ProductInfoModel *data = [[ProductInfoModel alloc] init];
+    data.productId = @"";
+    data.productName = [_topBannerArray objectAtIndex:index];
+    self.cellClickBlock(data);
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

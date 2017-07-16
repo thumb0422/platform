@@ -19,13 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="399.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-m0-tVy">
+                    <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-m0-tVy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="195"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8W-t6-4mu">
+                    <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8W-t6-4mu">
                         <rect key="frame" x="5" y="205" width="144" height="194.5"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-3Y-3lb">
+                    <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-3Y-3lb">
                         <rect key="frame" x="171" y="205" width="144" height="194.5"/>
                     </imageView>
                 </subviews>
@@ -44,6 +44,11 @@
                     <constraint firstItem="7SK-3Y-3lb" firstAttribute="centerY" secondItem="l8W-t6-4mu" secondAttribute="centerY" id="vbN-aR-CrP"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="leftImg" destination="l8W-t6-4mu" id="Z25-zf-lDc"/>
+                <outlet property="rightImg" destination="7SK-3Y-3lb" id="kf9-5v-TId"/>
+                <outlet property="topImg" destination="EJz-m0-tVy" id="BeO-7e-oKR"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

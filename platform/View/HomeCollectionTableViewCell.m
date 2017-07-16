@@ -40,6 +40,14 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"collection row = %ld",indexPath.row);
+    ProductInfoModel *model = [[ProductInfoModel alloc] init];
+    model.productId = @"AAA1";
+    model.productName = @"TestAAA1";
+    self.cellClickBlock(model);
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
