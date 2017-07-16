@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		1ECCEF903F1B44F5087B76F9 /* libPods-platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8589D09D31610A226BA /* libPods-platform.a */; };
 		6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8697EF1F0F7C66004ABF92 /* RFLayout.m */; };
-		6C8697F71F0F86DF004ABF92 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8697F51F0F86DF004ABF92 /* HomeCollectionCell.m */; };
-		6C8697F81F0F86DF004ABF92 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8697F61F0F86DF004ABF92 /* HomeCollectionCell.xib */; };
-		9A1F5B9A1F01D2C500525E5C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B991F01D2C500525E5C /* HomeViewController.m */; };
 		9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */; };
 		9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */; };
 		9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */; };
+		9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4451F17B8B900054505 /* HomeViewController.m */; };
+		9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4481F17C0D500054505 /* HomeCollectionCell.m */; };
+		9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4491F17C0D500054505 /* HomeCollectionCell.xib */; };
+		9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF44D1F17C1B500054505 /* HomeHeaderCell.m */; };
+		9AACF4501F17C1B500054505 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF44E1F17C1B500054505 /* HomeHeaderCell.xib */; };
+		9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4571F1A1ECE00054505 /* HomeImageTableViewCell.m */; };
+		9AACF45A1F1A1ECE00054505 /* HomeImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4581F1A1ECE00054505 /* HomeImageTableViewCell.xib */; };
+		9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF45D1F1A209000054505 /* HomeTopBottomTableViewCell.m */; };
+		9AACF4601F1A209000054505 /* HomeTopBottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF45E1F1A209000054505 /* HomeTopBottomTableViewCell.xib */; };
+		9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4621F1A26D900054505 /* HomeCollectionTableViewCell.m */; };
+		9AACF4651F1A26D900054505 /* HomeCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4631F1A26D900054505 /* HomeCollectionTableViewCell.xib */; };
+		9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF49F1F1A5C8200054505 /* UIView+Utils.m */; };
+		9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */; };
 		9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */; };
 		9AC8CA951F007F1300E11E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA931F007F1300E11E3C /* Main.storyboard */; };
 		9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA961F007F1300E11E3C /* Assets.xcassets */; };
@@ -26,19 +36,36 @@
 		6C8697E91F0F2D92004ABF92 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6C8697EE1F0F7C66004ABF92 /* RFLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFLayout.h; sourceTree = "<group>"; };
 		6C8697EF1F0F7C66004ABF92 /* RFLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFLayout.m; sourceTree = "<group>"; };
-		6C8697F41F0F86DF004ABF92 /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionCell.h; path = platform/ThirdPart/HomeCollectionCell.h; sourceTree = SOURCE_ROOT; };
-		6C8697F51F0F86DF004ABF92 /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionCell.m; path = platform/ThirdPart/HomeCollectionCell.m; sourceTree = SOURCE_ROOT; };
-		6C8697F61F0F86DF004ABF92 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCollectionCell.xib; path = platform/ThirdPart/HomeCollectionCell.xib; sourceTree = SOURCE_ROOT; };
 		962AC8589D09D31610A226BA /* libPods-platform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-platform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A156199DA1F3D027ACBFD50 /* Pods-platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-platform/Pods-platform.debug.xcconfig"; sourceTree = "<group>"; };
-		9A1F5B981F01D2C500525E5C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		9A1F5B991F01D2C500525E5C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
 		9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyInfoViewController.h; sourceTree = "<group>"; };
 		9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyInfoViewController.m; sourceTree = "<group>"; };
 		9A1F5BA11F01D32400525E5C /* MyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
 		9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
+		9AACF4441F17B8B900054505 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		9AACF4451F17B8B900054505 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9AACF4471F17C0D500054505 /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
+		9AACF4481F17C0D500054505 /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionCell.m; sourceTree = "<group>"; };
+		9AACF4491F17C0D500054505 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
+		9AACF44C1F17C1B500054505 /* HomeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderCell.h; sourceTree = "<group>"; };
+		9AACF44D1F17C1B500054505 /* HomeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderCell.m; sourceTree = "<group>"; };
+		9AACF44E1F17C1B500054505 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		9AACF4561F1A1ECE00054505 /* HomeImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeImageTableViewCell.h; sourceTree = "<group>"; };
+		9AACF4571F1A1ECE00054505 /* HomeImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeImageTableViewCell.m; sourceTree = "<group>"; };
+		9AACF4581F1A1ECE00054505 /* HomeImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeImageTableViewCell.xib; sourceTree = "<group>"; };
+		9AACF45C1F1A209000054505 /* HomeTopBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTopBottomTableViewCell.h; sourceTree = "<group>"; };
+		9AACF45D1F1A209000054505 /* HomeTopBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTopBottomTableViewCell.m; sourceTree = "<group>"; };
+		9AACF45E1F1A209000054505 /* HomeTopBottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTopBottomTableViewCell.xib; sourceTree = "<group>"; };
+		9AACF4611F1A26D900054505 /* HomeCollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionTableViewCell.h; sourceTree = "<group>"; };
+		9AACF4621F1A26D900054505 /* HomeCollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionTableViewCell.m; sourceTree = "<group>"; };
+		9AACF4631F1A26D900054505 /* HomeCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionTableViewCell.xib; sourceTree = "<group>"; };
+		9AACF4671F1A533600054505 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		9AACF49E1F1A5C8200054505 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		9AACF49F1F1A5C8200054505 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		9AACF4A11F1A5D7C00054505 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		9AC8CA871F007F1300E11E3C /* platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = platform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC8CA8A1F007F1300E11E3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,8 +109,8 @@
 		9A1F5BA41F01D36200525E5C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A1F5B981F01D2C500525E5C /* HomeViewController.h */,
-				9A1F5B991F01D2C500525E5C /* HomeViewController.m */,
+				9AACF4441F17B8B900054505 /* HomeViewController.h */,
+				9AACF4451F17B8B900054505 /* HomeViewController.m */,
 				9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */,
 				9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */,
 				9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */,
@@ -97,9 +124,21 @@
 		9A1F5BA51F01D37600525E5C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6C8697F41F0F86DF004ABF92 /* HomeCollectionCell.h */,
-				6C8697F51F0F86DF004ABF92 /* HomeCollectionCell.m */,
-				6C8697F61F0F86DF004ABF92 /* HomeCollectionCell.xib */,
+				9AACF45B1F1A1FA100054505 /* CollectionCell */,
+				9AACF4A11F1A5D7C00054505 /* BaseTableViewCell.h */,
+				9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */,
+				9AACF44C1F17C1B500054505 /* HomeHeaderCell.h */,
+				9AACF44D1F17C1B500054505 /* HomeHeaderCell.m */,
+				9AACF44E1F17C1B500054505 /* HomeHeaderCell.xib */,
+				9AACF4611F1A26D900054505 /* HomeCollectionTableViewCell.h */,
+				9AACF4621F1A26D900054505 /* HomeCollectionTableViewCell.m */,
+				9AACF4631F1A26D900054505 /* HomeCollectionTableViewCell.xib */,
+				9AACF4561F1A1ECE00054505 /* HomeImageTableViewCell.h */,
+				9AACF4571F1A1ECE00054505 /* HomeImageTableViewCell.m */,
+				9AACF4581F1A1ECE00054505 /* HomeImageTableViewCell.xib */,
+				9AACF45C1F1A209000054505 /* HomeTopBottomTableViewCell.h */,
+				9AACF45D1F1A209000054505 /* HomeTopBottomTableViewCell.m */,
+				9AACF45E1F1A209000054505 /* HomeTopBottomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +158,26 @@
 				9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		9AACF45B1F1A1FA100054505 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				9AACF4471F17C0D500054505 /* HomeCollectionCell.h */,
+				9AACF4481F17C0D500054505 /* HomeCollectionCell.m */,
+				9AACF4491F17C0D500054505 /* HomeCollectionCell.xib */,
+			);
+			name = CollectionCell;
+			sourceTree = "<group>";
+		};
+		9AACF4661F1A531B00054505 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9AACF49E1F1A5C8200054505 /* UIView+Utils.h */,
+				9AACF49F1F1A5C8200054505 /* UIView+Utils.m */,
+				9AACF4671F1A533600054505 /* Utility.h */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		9AC8CA7E1F007F1300E11E3C = {
@@ -146,6 +205,7 @@
 				9A1F5BA61F01D37D00525E5C /* Model */,
 				9A1F5BA51F01D37600525E5C /* View */,
 				9A1F5BA41F01D36200525E5C /* Controller */,
+				9AACF4661F1A531B00054505 /* Utility */,
 				9AC8CA8A1F007F1300E11E3C /* AppDelegate.h */,
 				9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */,
 				6C8697E91F0F2D92004ABF92 /* PrefixHeader.pch */,
@@ -226,9 +286,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8697F81F0F86DF004ABF92 /* HomeCollectionCell.xib in Resources */,
+				9AACF4651F1A26D900054505 /* HomeCollectionTableViewCell.xib in Resources */,
+				9AACF4501F17C1B500054505 /* HomeHeaderCell.xib in Resources */,
+				9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */,
 				9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */,
+				9AACF4601F1A209000054505 /* HomeTopBottomTableViewCell.xib in Resources */,
 				9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */,
+				9AACF45A1F1A1ECE00054505 /* HomeImageTableViewCell.xib in Resources */,
 				9AC8CA951F007F1300E11E3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A5FB457ACB798366969629B /* [CP] Embed Pods Frameworks */ = {
@@ -294,14 +358,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
+				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
 				9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */,
-				6C8697F71F0F86DF004ABF92 /* HomeCollectionCell.m in Sources */,
+				9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */,
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
+				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
+				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,
-				9A1F5B9A1F01D2C500525E5C /* HomeViewController.m in Sources */,
+				9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */,
+				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
+				9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

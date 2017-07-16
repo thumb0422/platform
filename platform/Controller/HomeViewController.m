@@ -2,51 +2,45 @@
 //  HomeViewController.m
 //  platform
 //
-//  Created by chliu.brook on 27/06/2017.
+//  Created by chliu.brook on 13/07/2017.
 //  Copyright © 2017 chliu.brook. All rights reserved.
 //
 
 #import "HomeViewController.h"
-#import "RFLayout.h"
-#import "HomeCollectionCell.h"
-static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 
-@interface HomeViewController ()<SDCycleScrollViewDelegate,UICollectionViewDataSource, UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource>{
-    NSArray *_topBannerArray;
-    NSArray *_hotSaleArray;
+#import "HomeHeaderCell.h"
+#import "HomeCollectionTableViewCell.h"
+#import "HomeImageTableViewCell.h"
+#import "HomeTopBottomTableViewCell.h"
+
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    NSArray *_identifyArray;
 }
 
 @end
 
 @implementation HomeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    //headerView
-    _topBannerArray = @[@"topBanner1.jpg",@"topBanner2.jpg"];
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.headerView.frame.size.height) shouldInfiniteLoop:YES imageNamesGroup:_topBannerArray];
-    cycleScrollView.delegate = self;
-    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-    cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    [self.headerView addSubview:cycleScrollView];
-    [self.headerView setBackgroundColor:[UIColor clearColor]];
-    
-    //collectionView
-    _hotSaleArray = @[@"hotSale1.jpg",@"hotSale2.jpg",@"hotSale1.jpg",@"hotSale2.jpg",@"hotSale1.jpg",@"hotSale2.jpg"];
-    [self.headerCollectionView registerNib:[UINib nibWithNibName:homeCollectionCellIdentifier bundle:nil] forCellWithReuseIdentifier:homeCollectionCellIdentifier];
-    self.headerCollectionView.collectionViewLayout = [[RFLayout alloc] init];
-    self.headerCollectionView.backgroundColor = [UIColor clearColor];
-    self.headerCollectionView.tag = 1001;
+-(void)awakeFromNib{
+    [super awakeFromNib];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell"];
+    [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
+    }];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,25 +48,52 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - SDCycleScrollViewDelegate
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
-{
-    NSLog(@"---点击了第%ld张图片", (long)index);
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _identifyArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *identify = [_identifyArray objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 0:
+            cell = (HomeHeaderCell *)cell;
+            break;
+        case 1:
+            cell = (HomeCollectionTableViewCell *)cell;
+            break;
+        case 2:
+            cell = (HomeImageTableViewCell *)cell;
+            cell.imageView.image = [UIImage imageNamed:@"topBanner2.jpg"];
+            break;
+        case 3:
+            cell = (HomeTopBottomTableViewCell *)cell;
+            break;
+        case 4:
+            cell = (HomeImageTableViewCell *)cell;
+            cell.imageView.image = [UIImage imageNamed:@"midBanner.png"];
+            break;
+            
+        default:
+            break;
+    }
     
-//    [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
-}
-
-#pragma mark UICollectionViewDelegate
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return _hotSaleArray.count;
-}
-
-- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    HomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:homeCollectionCellIdentifier forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:[_hotSaleArray objectAtIndex:indexPath.row]];
     return cell;
+}
+
+#pragma mark UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 /*
 #pragma mark - Navigation
@@ -84,43 +105,4 @@ static NSString *homeCollectionCellIdentifier = @"HomeCollectionCell";
 }
 */
 
-#pragma mark UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 44;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 44;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *footerView = [[UIView alloc] init];
-    [footerView setBackgroundColor:[UIColor yellowColor]];
-    return footerView;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *headerView = [[UIView alloc] init];
-    [headerView setBackgroundColor:[UIColor greenColor]];
-    return headerView;
-}
-
-#pragma mark UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.backgroundColor = [UIColor redColor];
-    return cell;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
-}
 @end
