@@ -27,7 +27,6 @@
     [self.leftImg addGestureRecognizer:leftGest];
     
     UITapGestureRecognizer *rightGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onImageClick:)];
-
     [self.rightImg addGestureRecognizer:rightGest];
 }
 

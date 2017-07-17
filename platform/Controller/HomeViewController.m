@@ -13,6 +13,7 @@
 #import "HomeCollectionTableViewCell.h"
 #import "HomeImageTableViewCell.h"
 #import "HomeTopBottomTableViewCell.h"
+#import "HomeCompsiteTableViewCell.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_identifyArray;
@@ -29,8 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _rowHeightArray = @[[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:400],[NSNumber numberWithInteger:200]];
-    _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell"];
+    _rowHeightArray = @[[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:400],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:700]];
+    _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell",@"HomeCompsiteTableViewCell"];
     [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
@@ -100,7 +101,16 @@
                 dataModel = data;
             };
             break;
-            
+        case 5:
+        {
+            HomeCompsiteTableViewCell *tmpCell = (HomeCompsiteTableViewCell *)cell;
+            tmpCell.imageArray = @[@"newP1",@"newP2",@"newP3",@"newP4",@"newP5"];
+            cell.cellClickBlock = ^(ProductInfoModel *data) {
+                NSLog(@"111---name=%@,tag=%@",data.productName,data.productId);
+            };
+            return tmpCell;
+        }
+            break;
         default:
             break;
     }

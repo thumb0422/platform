@@ -9,10 +9,20 @@
 #import "HomeImageTableViewCell.h"
 
 @implementation HomeImageTableViewCell
-@synthesize imageView;
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    UITapGestureRecognizer *topGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onImageClick:)];
+    [self.imageView addGestureRecognizer:topGest];
+}
+
+-(void)onImageClick:(UITapGestureRecognizer *)sender{
+    UIImageView *tmpImgView = (UIImageView *)[sender view];
+    NSInteger tag = tmpImgView.tag;
+    ProductInfoModel *model = [[ProductInfoModel alloc] init];
+    model.productName = @"HomeImageTableViewCell";
+    model.productId = [NSString stringWithFormat:@"Id %ld",tag];
+    self.cellClickBlock(model);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

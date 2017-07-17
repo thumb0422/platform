@@ -31,6 +31,8 @@
 		9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA961F007F1300E11E3C /* Assets.xcassets */; };
 		9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */; };
 		9AC8CA9D1F007F1300E11E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA9C1F007F1300E11E3C /* main.m */; };
+		9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */; };
+		9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,9 @@
 		9AC8CA991F007F1300E11E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AC8CA9B1F007F1300E11E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AC8CA9C1F007F1300E11E3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
+		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
+		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
 		B31DF425355399C49A90FE24 /* Pods-platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platform.release.xcconfig"; path = "Pods/Target Support Files/Pods-platform/Pods-platform.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +147,9 @@
 				9AACF45C1F1A209000054505 /* HomeTopBottomTableViewCell.h */,
 				9AACF45D1F1A209000054505 /* HomeTopBottomTableViewCell.m */,
 				9AACF45E1F1A209000054505 /* HomeTopBottomTableViewCell.xib */,
+				9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */,
+				9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */,
+				9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AACF4651F1A26D900054505 /* HomeCollectionTableViewCell.xib in Resources */,
+				9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */,
 				9AACF4501F17C1B500054505 /* HomeHeaderCell.xib in Resources */,
 				9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */,
 				9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */,
@@ -369,6 +378,7 @@
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
+				9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */,
 				9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */,
 				9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */,
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
