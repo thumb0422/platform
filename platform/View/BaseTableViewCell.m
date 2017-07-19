@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.backgroundColor = [UIColor clearColor];
     [self setFrame:CGRectMake(self.left, self.top, SCREEN_WIDTH, self.height)];
 }
 
