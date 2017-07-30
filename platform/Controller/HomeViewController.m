@@ -35,6 +35,7 @@
     [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
+    self.mainTV.allowsSelection = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
