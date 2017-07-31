@@ -65,11 +65,15 @@
     NSString *identify = [_identifyArray objectAtIndex:indexPath.row];
     BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
     __block ProductInfoModel *dataModel = nil;
+    __block UIViewController *nextVC = nil;
     switch (indexPath.row) {
         case 0:
             cell = (HomeHeaderCell *)cell;
             cell.cellClickBlock = ^(ProductInfoModel *data) {
                 dataModel = data;
+                UIStoryboard *detailSB = [UIStoryboard storyboardWithName:@"Detail" bundle:nil];
+                nextVC = [detailSB instantiateViewControllerWithIdentifier:@"DetailViewController"];
+                [self.navigationController pushViewController:nextVC animated:NO];
             };
             break;
         case 1:
