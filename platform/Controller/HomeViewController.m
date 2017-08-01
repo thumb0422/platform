@@ -65,6 +65,17 @@
     NSString *identify = [_identifyArray objectAtIndex:indexPath.row];
     BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
     __block ProductInfoModel *dataModel = nil;
+    /*
+    if (indexPath.row == 0){
+        cell = (HomeHeaderCell *)cell;
+        cell.cellClickBlock = ^(ProductInfoModel *data) {
+            dataModel = data;
+            UIStoryboard *detailSB = [UIStoryboard storyboardWithName:@"Detail" bundle:nil];
+            UIViewController * nextVC = [detailSB instantiateViewControllerWithIdentifier:@"DetailViewController"];
+            [self.navigationController pushViewController:nextVC animated:YES];
+        };
+    }
+    */
     switch (indexPath.row) {
         case 0:
             cell = (HomeHeaderCell *)cell;
@@ -115,7 +126,6 @@
         default:
             break;
     }
-    
     return cell;
 }
 
