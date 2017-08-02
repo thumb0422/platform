@@ -8,5 +8,6 @@ target 'platform' do
     pod 'MBProgressHUD'
     pod 'Toast'
     pod 'SDCycleScrollView', '~> 1.66'
+    pod 'SCLAlertView-Objective-C'
 #    pod 'Nimbus', '~> 1.3.0'
 end

@@ -89,6 +89,7 @@
 		9AC8CA991F007F1300E11E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AC8CA9B1F007F1300E11E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AC8CA9C1F007F1300E11E3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9AD2F6101F320EAD00D6D85F /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
 		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
 		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
 		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -257,6 +258,7 @@
 				9AC8CA9B1F007F1300E11E3C /* Info.plist */,
 				9AC8CA9C1F007F1300E11E3C /* main.m */,
 				9A1F5BA71F01D38700525E5C /* Resource */,
+				9AD2F6101F320EAD00D6D85F /* Note.md */,
 			);
 			path = platform;
 			sourceTree = "<group>";
