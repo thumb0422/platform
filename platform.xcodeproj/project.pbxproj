@@ -35,6 +35,7 @@
 		9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA961F007F1300E11E3C /* Assets.xcassets */; };
 		9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */; };
 		9AC8CA9D1F007F1300E11E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA9C1F007F1300E11E3C /* main.m */; };
+		9AD2F6131F32932500D6D85F /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2F6111F32932500D6D85F /* WRNavigationBar.m */; };
 		9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */; };
 		9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,8 @@
 		9AC8CA9B1F007F1300E11E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AC8CA9C1F007F1300E11E3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AD2F6101F320EAD00D6D85F /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
+		9AD2F6111F32932500D6D85F /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WRNavigationBar.m; path = "../../../../../../../../Downloads/WRNavigationBar-master/WRNavigationBar/WRNavigationBar.m"; sourceTree = "<group>"; };
+		9AD2F6121F32932500D6D85F /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WRNavigationBar.h; path = "../../../../../../../../Downloads/WRNavigationBar-master/WRNavigationBar/WRNavigationBar.h"; sourceTree = "<group>"; };
 		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
 		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
 		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 			children = (
 				6C8697EE1F0F7C66004ABF92 /* RFLayout.h */,
 				6C8697EF1F0F7C66004ABF92 /* RFLayout.m */,
+				9AD2F6121F32932500D6D85F /* WRNavigationBar.h */,
+				9AD2F6111F32932500D6D85F /* WRNavigationBar.m */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 			files = (
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
+				9AD2F6131F32932500D6D85F /* WRNavigationBar.m in Sources */,
 				9A31C8DC1F2FEE4B00DA8604 /* DetailViewController.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
