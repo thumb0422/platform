@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self wr_setNavBarBackgroundAlpha:0];
     _rowHeightArray = @[[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:400],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:700]];
     _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell",@"HomeCompsiteTableViewCell"];
     [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
