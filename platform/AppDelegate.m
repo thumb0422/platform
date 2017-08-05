@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BaseNavController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,10 +22,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"HomeViewController"]];
-    UINavigationController *purchaseNav = [[UINavigationController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"PurchaseViewController"]];
-    UINavigationController *companyNav = [[UINavigationController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"CompanyInfoViewController"]];
-    UINavigationController *myCenterNav = [[UINavigationController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"MyCenterViewController"]];
+    BaseNavController *homeNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"HomeViewController"]];
+    BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"PurchaseViewController"]];
+    BaseNavController *companyNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"CompanyInfoViewController"]];
+    BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"MyCenterViewController"]];
     UITabBarController *tabVC = [[UITabBarController alloc] init];
     tabVC.viewControllers = @[homeNav,purchaseNav,companyNav,myCenterNav];
     [self setTabBarItems:tabVC];
@@ -72,7 +72,6 @@
 - (void)setNavBarAppearence
 {
     UIColor *MainNavBarColor = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
-//    UIColor *MainViewColor   = [UIColor colorWithRed:126/255.0 green:126/255.0 blue:126/255.0 alpha:1];
     // 设置导航栏默认的背景颜色
     [UIColor wr_setDefaultNavBarBarTintColor:MainNavBarColor];
     // 设置导航栏所有按钮的默认颜色
@@ -82,13 +81,7 @@
     // 统一设置状态栏样式
     [UIColor wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
     // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
-    // [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
-}
--(void)setupTabBarControllers{
-    
+//     [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
 }
 
--(void)setupNavigationController{
-    
-}
 @end

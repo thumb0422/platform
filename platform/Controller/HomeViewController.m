@@ -30,21 +30,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self wr_setNavBarBackgroundAlpha:0];
+    self.mainTV.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
     _rowHeightArray = @[[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:400],[NSNumber numberWithInteger:200],[NSNumber numberWithInteger:700]];
     _identifyArray = @[@"HomeHeaderCell",@"HomeCollectionTableViewCell",@"HomeImageTableViewCell",@"HomeTopBottomTableViewCell",@"HomeImageTableViewCell",@"HomeCompsiteTableViewCell"];
     [_identifyArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
     self.mainTV.allowsSelection = NO;
+     [self wr_setNavBarBackgroundAlpha:0];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +55,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > -80)
+    {
+        [self changeNavBarAnimateWithIsClear:NO];
+    }
+    else
+    {
+        [self changeNavBarAnimateWithIsClear:YES];
+    }
+}
+
+- (void)changeNavBarAnimateWithIsClear:(BOOL)isClear
+{
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.6 animations:^
+     {
+         __strong typeof(self) pThis = weakSelf;
+         if (isClear == YES) {
+             [pThis wr_setNavBarBackgroundAlpha:0];
+         } else {
+             [pThis wr_setNavBarBackgroundAlpha:1.0];
+         }
+     }];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

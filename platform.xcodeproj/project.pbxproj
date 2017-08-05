@@ -36,6 +36,8 @@
 		9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */; };
 		9AC8CA9D1F007F1300E11E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA9C1F007F1300E11E3C /* main.m */; };
 		9AD2F6131F32932500D6D85F /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2F6111F32932500D6D85F /* WRNavigationBar.m */; };
+		9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9121F35494D0060FA66 /* BaseNavController.m */; };
+		9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9171F354AD10060FA66 /* BaseViewController.m */; };
 		9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */; };
 		9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,10 @@
 		9AD2F6101F320EAD00D6D85F /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
 		9AD2F6111F32932500D6D85F /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WRNavigationBar.m; path = "../../../../../../../../Downloads/WRNavigationBar-master/WRNavigationBar/WRNavigationBar.m"; sourceTree = "<group>"; };
 		9AD2F6121F32932500D6D85F /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WRNavigationBar.h; path = "../../../../../../../../Downloads/WRNavigationBar-master/WRNavigationBar/WRNavigationBar.h"; sourceTree = "<group>"; };
+		9ADDA9111F35494D0060FA66 /* BaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
+		9ADDA9121F35494D0060FA66 /* BaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
+		9ADDA9161F354AD10060FA66 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		9ADDA9171F354AD10060FA66 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
 		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
 		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 		9A1F5BA41F01D36200525E5C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9ADDA9101F3549260060FA66 /* Base */,
 				9A31C8DD1F2FEED900DA8604 /* My */,
 				9A31C8D91F2FEE1800DA8604 /* Detail */,
 				9AACF4441F17B8B900054505 /* HomeViewController.h */,
@@ -266,6 +273,17 @@
 				9AD2F6101F320EAD00D6D85F /* Note.md */,
 			);
 			path = platform;
+			sourceTree = "<group>";
+		};
+		9ADDA9101F3549260060FA66 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9ADDA9111F35494D0060FA66 /* BaseNavController.h */,
+				9ADDA9121F35494D0060FA66 /* BaseNavController.m */,
+				9ADDA9161F354AD10060FA66 /* BaseViewController.h */,
+				9ADDA9171F354AD10060FA66 /* BaseViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		A1E3475D5E227F34D026AB5E /* Pods */ = {
@@ -419,6 +437,7 @@
 				9A31C8DC1F2FEE4B00DA8604 /* DetailViewController.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
+				9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
 				9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */,
@@ -431,6 +450,7 @@
 				9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */,
 				9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */,
 				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
+				9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */,
 				9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
