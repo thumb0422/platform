@@ -54,3 +54,5 @@ return value;                                                                   
 #define AppBuild [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 #define AppBundle [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
 
+//根据sotryboard、identify获取对应的VC
+#define SelfSBVC(storyBoard,identifier) [[UIStoryboard storyboardWithName:storyBoard bundle:nil] instantiateViewControllerWithIdentifier:identifier]

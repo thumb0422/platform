@@ -21,11 +21,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    BaseNavController *homeNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"HomeViewController"]];
-    BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"PurchaseViewController"]];
-    BaseNavController *companyNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"CompanyInfoViewController"]];
-    BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:[mainSB instantiateViewControllerWithIdentifier:@"MyCenterViewController"]];
+    BaseNavController *homeNav     = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"HomeViewController")];
+    BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"PurchaseViewController")];
+    BaseNavController *companyNav  = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CompanyInfoViewController")];
+    BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"MyCenterViewController")];
+    
     UITabBarController *tabVC = [[UITabBarController alloc] init];
     tabVC.viewControllers = @[homeNav,purchaseNav,companyNav,myCenterNav];
     [self setTabBarItems:tabVC];

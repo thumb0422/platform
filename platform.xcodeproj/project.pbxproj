@@ -15,8 +15,10 @@
 		9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8D51F2F605300DA8604 /* Detail.storyboard */; };
 		9A31C8DC1F2FEE4B00DA8604 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */; };
 		9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */; };
-		9A31C8E51F30B86500DA8604 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8E41F30B86500DA8604 /* My.storyboard */; };
+		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
 		9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */; };
+		9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */; };
+		9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D121F375DF400FCC1F5 /* DBManager.m */; };
 		9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4451F17B8B900054505 /* HomeViewController.m */; };
 		9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4481F17C0D500054505 /* HomeCollectionCell.m */; };
 		9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4491F17C0D500054505 /* HomeCollectionCell.xib */; };
@@ -60,9 +62,13 @@
 		9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		9A31C8E41F30B86500DA8604 /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		9A3969F21F3717F1004B597B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		9A7D79811F36D7FB00D74EB6 /* WRNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		9AA70D0E1F37493100FCC1F5 /* RegistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		9AA70D111F375DF400FCC1F5 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		9AA70D121F375DF400FCC1F5 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		9AACF4441F17B8B900054505 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		9AACF4451F17B8B900054505 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9AACF4471F17C0D500054505 /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
@@ -199,7 +205,7 @@
 				9AC8CA961F007F1300E11E3C /* Assets.xcassets */,
 				9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */,
 				9A31C8D51F2F605300DA8604 /* Detail.storyboard */,
-				9A31C8E41F30B86500DA8604 /* My.storyboard */,
+				9A3969F21F3717F1004B597B /* Login.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 			children = (
 				9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */,
 				9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */,
+				9AA70D0E1F37493100FCC1F5 /* RegistViewController.h */,
+				9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -238,6 +246,8 @@
 				9AACF4671F1A533600054505 /* Utility.h */,
 				9AACF49E1F1A5C8200054505 /* UIView+Utils.h */,
 				9AACF49F1F1A5C8200054505 /* UIView+Utils.m */,
+				9AA70D111F375DF400FCC1F5 /* DBManager.h */,
+				9AA70D121F375DF400FCC1F5 /* DBManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -377,8 +387,8 @@
 				9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */,
 				9AACF4601F1A209000054505 /* HomeTopBottomTableViewCell.xib in Resources */,
 				9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */,
+				9A3969F31F3717F1004B597B /* Login.storyboard in Resources */,
 				9AACF45A1F1A1ECE00054505 /* HomeImageTableViewCell.xib in Resources */,
-				9A31C8E51F30B86500DA8604 /* My.storyboard in Resources */,
 				9AC8CA951F007F1300E11E3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +460,7 @@
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
+				9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */,
 				9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
@@ -458,6 +469,7 @@
 				9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */,
 				9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */,
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
+				9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */,
 				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,

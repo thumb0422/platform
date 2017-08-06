@@ -12,18 +12,24 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    UITapGestureRecognizer *topGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onImageClick:)];
-    [self.imageView addGestureRecognizer:topGest];
+//    UITapGestureRecognizer *topGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onImageClick:)];
+//    [self.imageView addGestureRecognizer:topGest];
+    [self.imageView bk_whenTapped:^{
+        ProductInfoModel *model = [[ProductInfoModel alloc] init];
+        model.productName = @"HomeImageTableViewCell";
+        model.productId = [NSString stringWithFormat:@"Id %ld",self.imageView.tag];
+        self.cellClickBlock(model);
+    }];
 }
 
--(void)onImageClick:(UITapGestureRecognizer *)sender{
-    UIImageView *tmpImgView = (UIImageView *)[sender view];
-    NSInteger tag = tmpImgView.tag;
-    ProductInfoModel *model = [[ProductInfoModel alloc] init];
-    model.productName = @"HomeImageTableViewCell";
-    model.productId = [NSString stringWithFormat:@"Id %ld",tag];
-    self.cellClickBlock(model);
-}
+//-(void)onImageClick:(UITapGestureRecognizer *)sender{
+//    UIImageView *tmpImgView = (UIImageView *)[sender view];
+//    NSInteger tag = tmpImgView.tag;
+//    ProductInfoModel *model = [[ProductInfoModel alloc] init];
+//    model.productName = @"HomeImageTableViewCell";
+//    model.productId = [NSString stringWithFormat:@"Id %ld",tag];
+//    self.cellClickBlock(model);
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

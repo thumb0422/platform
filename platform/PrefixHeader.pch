@@ -17,6 +17,15 @@
 #import "WRNavigationBar.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
+#import <SCLAlertView.h>
+#import <SCLButton.h>
+#import <SCLTextView.h>
+#import <SCLTimerDisplay.h>
+
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import <BlocksKit/BlocksKit.h>
+
+#import <Realm/Realm.h>
 #endif /* PrefixHeader_pch */
 
 

@@ -87,8 +87,34 @@
                     <view key="view" contentMode="scaleToFill" id="u6k-kw-TmQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbQ-bN-h4s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ovg-3n-I6m"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-d4-Hom">
+                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gbQ-bN-h4s" secondAttribute="trailing" id="Cgk-nI-B0p"/>
+                            <constraint firstItem="gbQ-bN-h4s" firstAttribute="top" secondItem="u6k-kw-TmQ" secondAttribute="top" id="DDY-E9-Tyr"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0E-d4-Hom" secondAttribute="trailing" id="IQW-jT-y01"/>
+                            <constraint firstItem="eEl-oR-htZ" firstAttribute="top" secondItem="Q0E-d4-Hom" secondAttribute="bottom" id="InD-VG-dwe"/>
+                            <constraint firstItem="Q0E-d4-Hom" firstAttribute="leading" secondItem="u6k-kw-TmQ" secondAttribute="leading" id="nva-nL-G1u"/>
+                            <constraint firstItem="gbQ-bN-h4s" firstAttribute="leading" secondItem="u6k-kw-TmQ" secondAttribute="leading" id="oyB-BS-hEu"/>
+                            <constraint firstItem="Q0E-d4-Hom" firstAttribute="top" secondItem="gbQ-bN-h4s" secondAttribute="bottom" constant="15" id="xUl-oM-fiy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainTV" destination="Q0E-d4-Hom" id="fS1-es-gZv"/>
+                        <outlet property="topView" destination="gbQ-bN-h4s" id="woV-8U-tcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQD-cz-eIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
