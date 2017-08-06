@@ -19,6 +19,7 @@
 		9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */; };
 		9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */; };
 		9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D121F375DF400FCC1F5 /* DBManager.m */; };
+		9AA70D161F37666200FCC1F5 /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D151F37666200FCC1F5 /* AccountModel.m */; };
 		9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4451F17B8B900054505 /* HomeViewController.m */; };
 		9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4481F17C0D500054505 /* HomeCollectionCell.m */; };
 		9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AACF4491F17C0D500054505 /* HomeCollectionCell.xib */; };
@@ -69,6 +70,8 @@
 		9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		9AA70D111F375DF400FCC1F5 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		9AA70D121F375DF400FCC1F5 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		9AA70D141F37666200FCC1F5 /* AccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
+		9AA70D151F37666200FCC1F5 /* AccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
 		9AACF4441F17B8B900054505 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		9AACF4451F17B8B900054505 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		9AACF4471F17C0D500054505 /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 			children = (
 				9AACF4A41F1B266B00054505 /* ProductInfoModel.h */,
 				9AACF4A51F1B266B00054505 /* ProductInfoModel.m */,
+				9AA70D141F37666200FCC1F5 /* AccountModel.h */,
+				9AA70D151F37666200FCC1F5 /* AccountModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
 				9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */,
 				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
+				9AA70D161F37666200FCC1F5 /* AccountModel.m in Sources */,
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,
 				9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */,
