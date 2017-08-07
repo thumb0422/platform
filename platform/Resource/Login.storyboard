@@ -13,7 +13,7 @@
         <!--Regist View Controller-->
         <scene sceneID="Ggt-z8-Lgm">
             <objects>
-                <viewController storyboardIdentifier="RegistViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HYo-Vp-OGk" customClass="RegistViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HYo-Vp-OGk" customClass="RegistViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tfG-5D-ZYU"/>
                         <viewControllerLayoutGuide type="bottom" id="JZO-xM-fjd"/>
@@ -133,7 +133,7 @@
         <!--Login View Controller-->
         <scene sceneID="0ru-Ha-rzd">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mJM-nF-zXk" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mJM-nF-zXk" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BNB-Gc-6md"/>
                         <viewControllerLayoutGuide type="bottom" id="fdC-Al-Glt"/>
@@ -180,15 +180,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gz-8r-dLR">
-                                <rect key="frame" x="16" y="352" width="290" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gz-8r-dLR">
+                                <rect key="frame" x="15" y="352" width="290" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xxe-UD-Egw"/>
+                                </constraints>
                                 <state key="normal" title="登        录"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-es-bvl">
-                                <rect key="frame" x="16" y="412" width="290" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-es-bvl">
+                                <rect key="frame" x="15" y="412" width="290" height="44"/>
                                 <state key="normal" title="快速注册"/>
                                 <connections>
                                     <segue destination="HYo-Vp-OGk" kind="show" id="ACL-5d-gQW"/>
@@ -199,18 +200,25 @@
                         <constraints>
                             <constraint firstItem="VUJ-s6-oSn" firstAttribute="top" secondItem="BoJ-go-TY0" secondAttribute="bottom" constant="30" id="BBV-q4-HtK"/>
                             <constraint firstItem="BoJ-go-TY0" firstAttribute="leading" secondItem="0P1-Aq-Kpd" secondAttribute="leading" id="DIq-Gh-bBq"/>
+                            <constraint firstItem="nXZ-es-bvl" firstAttribute="width" secondItem="8Gz-8r-dLR" secondAttribute="width" id="DNZ-L5-Dfj"/>
                             <constraint firstAttribute="trailing" secondItem="BoJ-go-TY0" secondAttribute="trailing" id="DpX-Tr-YlU"/>
                             <constraint firstItem="RZb-DA-zjC" firstAttribute="centerY" secondItem="VUJ-s6-oSn" secondAttribute="centerY" id="Hex-4l-Wf9"/>
+                            <constraint firstItem="8Gz-8r-dLR" firstAttribute="top" secondItem="y9u-Lt-Gxu" secondAttribute="bottom" constant="32" id="OqJ-Rn-oC0"/>
                             <constraint firstItem="y9u-Lt-Gxu" firstAttribute="height" secondItem="VUJ-s6-oSn" secondAttribute="height" id="SG3-3S-mtm"/>
                             <constraint firstItem="osg-oV-EBF" firstAttribute="centerY" secondItem="y9u-Lt-Gxu" secondAttribute="centerY" id="SwJ-EI-Eyp"/>
+                            <constraint firstItem="nXZ-es-bvl" firstAttribute="centerX" secondItem="8Gz-8r-dLR" secondAttribute="centerX" id="V8c-WB-fsZ"/>
                             <constraint firstItem="RZb-DA-zjC" firstAttribute="leading" secondItem="VUJ-s6-oSn" secondAttribute="trailing" constant="5" id="VL9-cT-K7m"/>
                             <constraint firstItem="VUJ-s6-oSn" firstAttribute="leading" secondItem="0P1-Aq-Kpd" secondAttribute="leading" constant="15" id="ViH-Iu-RCD"/>
                             <constraint firstItem="y9u-Lt-Gxu" firstAttribute="top" secondItem="VUJ-s6-oSn" secondAttribute="bottom" constant="30" id="XlM-h3-ih0"/>
                             <constraint firstItem="y9u-Lt-Gxu" firstAttribute="width" secondItem="VUJ-s6-oSn" secondAttribute="width" id="b3G-TB-BiG"/>
                             <constraint firstAttribute="trailing" secondItem="osg-oV-EBF" secondAttribute="trailing" constant="15" id="d11-An-rAd"/>
                             <constraint firstItem="osg-oV-EBF" firstAttribute="leading" secondItem="y9u-Lt-Gxu" secondAttribute="trailing" constant="5" id="dbd-42-dLP"/>
+                            <constraint firstItem="nXZ-es-bvl" firstAttribute="top" secondItem="8Gz-8r-dLR" secondAttribute="bottom" constant="16" id="dm9-fo-leA"/>
                             <constraint firstAttribute="trailing" secondItem="RZb-DA-zjC" secondAttribute="trailing" constant="15" id="ex4-Im-PLy"/>
+                            <constraint firstItem="8Gz-8r-dLR" firstAttribute="leading" secondItem="0P1-Aq-Kpd" secondAttribute="leading" constant="15" id="gUe-qW-ml3"/>
                             <constraint firstItem="y9u-Lt-Gxu" firstAttribute="centerX" secondItem="VUJ-s6-oSn" secondAttribute="centerX" id="jQ2-Lb-9tu"/>
+                            <constraint firstItem="nXZ-es-bvl" firstAttribute="height" secondItem="8Gz-8r-dLR" secondAttribute="height" id="nGs-Xb-9Gk"/>
+                            <constraint firstAttribute="trailing" secondItem="8Gz-8r-dLR" secondAttribute="trailing" constant="15" id="plf-xp-FWo"/>
                             <constraint firstItem="BoJ-go-TY0" firstAttribute="top" secondItem="0P1-Aq-Kpd" secondAttribute="top" id="xvd-6B-gXZ"/>
                             <constraint firstItem="osg-oV-EBF" firstAttribute="height" secondItem="RZb-DA-zjC" secondAttribute="height" id="zuX-gI-ffc"/>
                         </constraints>
