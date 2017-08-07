@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseNavController.h"
+//#import "Account.h"
 @interface AppDelegate ()
 
 @end
@@ -31,6 +32,13 @@
     [self setTabBarItems:tabVC];
     self.window.rootViewController = tabVC;
     [self setNavBarAppearence];
+    
+    NSLog(@"%@",NSHomeDirectory());
+//    RLMRealm *realm = [RLMRealm defaultRealm];
+//    [realm transactionWithBlock:^{
+//        [Account createOrUpdateInRealm:realm withValue:@[@"BBBB",@"url",@"1592111"]];
+//    }];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

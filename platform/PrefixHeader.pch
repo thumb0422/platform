@@ -15,6 +15,7 @@
 #import "UIView+Utils.h"
 #import "BaseTableViewCell.h"
 #import "WRNavigationBar.h"
+#import "NSString+Utility.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <SCLAlertView.h>

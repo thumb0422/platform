@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "platform/AppDelegate.m"
-            timestampString = "523717608.68669"
+            timestampString = "523807603.768512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
             <Actions>
