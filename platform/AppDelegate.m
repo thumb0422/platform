@@ -32,13 +32,6 @@
     [self setTabBarItems:tabVC];
     self.window.rootViewController = tabVC;
     [self setNavBarAppearence];
-    
-    NSLog(@"%@",NSHomeDirectory());
-//    RLMRealm *realm = [RLMRealm defaultRealm];
-//    [realm transactionWithBlock:^{
-//        [Account createOrUpdateInRealm:realm withValue:@[@"BBBB",@"url",@"1592111"]];
-//    }];
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -68,12 +61,12 @@
 - (void)setTabBarItems:(UITabBarController*)tabBarVC
 {
     NSArray *titles = @[@"首页", @"购买", @"公司介绍",@"我的"];
-//    NSArray *normalImages = @[@"mine", @"mine", @"mine"];
-//    NSArray *highlightImages = @[@"mineHighlight", @"mineHighlight", @"mineHighlight"];
+    NSArray *normalImages = @[@"home_noraml", @"purchase_noraml",@"company_noraml", @"my_normal"];
+    NSArray *highlightImages = @[@"home_selected", @"purchase_selected",@"company_selected", @"my_selected"];
     [tabBarVC.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.title = titles[idx];
-//        obj.image = [[UIImage imageNamed:normalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        obj.selectedImage = [[UIImage imageNamed:highlightImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        obj.image = [[UIImage imageNamed:normalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        obj.selectedImage = [[UIImage imageNamed:highlightImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }];
 }
 
