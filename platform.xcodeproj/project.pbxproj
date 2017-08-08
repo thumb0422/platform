@@ -759,6 +759,7 @@
 				9AC311D91F38A9200036B5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AC8CA821F007F1300E11E3C /* Build configuration list for PBXProject "platform" */ = {
 			isa = XCConfigurationList;

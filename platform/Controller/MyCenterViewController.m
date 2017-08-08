@@ -7,7 +7,7 @@
 //
 
 #import "MyCenterViewController.h"
-#import "DBManager.h"
+#import "Account.h"
 @interface MyCenterViewController (){
     BOOL isLogin;
 }
@@ -31,8 +31,17 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    DBManager *db = [DBManager getInstance];
-    
+    isLogin = [self isLogin];
+}
+
+-(BOOL)isLogin{
+    BOOL result = false;
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMResults *qryResult = [Account allObjects];
+    if (qryResult.count > 0){
+        
+    }
+    return result;
 }
 
 - (void)didReceiveMemoryWarning {
