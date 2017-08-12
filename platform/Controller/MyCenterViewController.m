@@ -10,6 +10,7 @@
 #import "AccountInfo.h"
 @interface MyCenterViewController (){
     BOOL _isLogin;
+    Account *_account;
     AccountInfo *_accountInfo;
 }
 
@@ -51,7 +52,8 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    _accountInfo = [self isLogin];
+    _account = [self isLogin];
+    _accountInfo = [[AccountInfo objectsWhere:@"mobileNo = %@ and isValid = %@",_account.mobileNo,@YES] firstObject];
     _isLogin = _accountInfo.isValid;
 }
 
@@ -60,10 +62,10 @@
     [self.navigationController setNavigationBarHidden:NO];
 }
 
--(AccountInfo *)isLogin{
-    RLMResults<AccountInfo *> *accountInfos = [AccountInfo allObjects];
+-(Account *)isLogin{
+    RLMResults<Account *> *accountInfos = [Account allObjects];
     for (int i = 0;i<accountInfos.count;i++){
-        AccountInfo *accountTmp = [accountInfos objectAtIndex:i];
+        Account *accountTmp = [accountInfos objectAtIndex:i];
         if (accountTmp.isValid){
             return accountTmp;
         }
