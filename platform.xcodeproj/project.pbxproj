@@ -33,7 +33,6 @@
 		9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF49F1F1A5C8200054505 /* UIView+Utils.m */; };
 		9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */; };
 		9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4A51F1B266B00054505 /* ProductInfoModel.m */; };
-		9AC311C51F3892C80036B5EF /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC311C41F3892C80036B5EF /* Account.m */; };
 		9AC311CB1F38A0260036B5EF /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC311CA1F38A0260036B5EF /* NSString+Utility.m */; };
 		9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA8B1F007F1300E11E3C /* AppDelegate.m */; };
 		9AC8CA951F007F1300E11E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA931F007F1300E11E3C /* Main.storyboard */; };
@@ -43,6 +42,8 @@
 		9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9121F35494D0060FA66 /* BaseNavController.m */; };
 		9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9171F354AD10060FA66 /* BaseViewController.m */; };
 		9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA91B1F35CDB00060FA66 /* UnLoginView.m */; };
+		9AE0DAF91F3EC18700925A9A /* MigrationDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0DAF81F3EC18700925A9A /* MigrationDB.m */; };
+		9AE0DAFC1F3F0D7B00925A9A /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */; };
 		9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */; };
 		9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -105,8 +106,6 @@
 		9AACF4A21F1A5D7C00054505 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		9AACF4A41F1B266B00054505 /* ProductInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoModel.h; sourceTree = "<group>"; };
 		9AACF4A51F1B266B00054505 /* ProductInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfoModel.m; sourceTree = "<group>"; };
-		9AC311C31F3892C80036B5EF /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		9AC311C41F3892C80036B5EF /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		9AC311C91F38A0260036B5EF /* NSString+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
 		9AC311CA1F38A0260036B5EF /* NSString+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utility.m"; sourceTree = "<group>"; };
 		9AC311D01F38A9200036B5EF /* platformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = platformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +124,10 @@
 		9ADDA9171F354AD10060FA66 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		9ADDA91A1F35CDB00060FA66 /* UnLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnLoginView.h; sourceTree = "<group>"; };
 		9ADDA91B1F35CDB00060FA66 /* UnLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnLoginView.m; sourceTree = "<group>"; };
+		9AE0DAF71F3EC18700925A9A /* MigrationDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MigrationDB.h; sourceTree = "<group>"; };
+		9AE0DAF81F3EC18700925A9A /* MigrationDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MigrationDB.m; sourceTree = "<group>"; };
+		9AE0DAFA1F3F0D7B00925A9A /* AccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
+		9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
 		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
 		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
 		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -218,8 +221,8 @@
 			children = (
 				9AACF4A41F1B266B00054505 /* ProductInfoModel.h */,
 				9AACF4A51F1B266B00054505 /* ProductInfoModel.m */,
-				9AC311C31F3892C80036B5EF /* Account.h */,
-				9AC311C41F3892C80036B5EF /* Account.m */,
+				9AE0DAFA1F3F0D7B00925A9A /* AccountInfo.h */,
+				9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,8 @@
 				9AA70D121F375DF400FCC1F5 /* DBManager.m */,
 				9AC311C91F38A0260036B5EF /* NSString+Utility.h */,
 				9AC311CA1F38A0260036B5EF /* NSString+Utility.m */,
+				9AE0DAF71F3EC18700925A9A /* MigrationDB.h */,
+				9AE0DAF81F3EC18700925A9A /* MigrationDB.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE0DAF91F3EC18700925A9A /* MigrationDB.m in Sources */,
 				9AC311CB1F38A0260036B5EF /* NSString+Utility.m in Sources */,
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
@@ -536,6 +542,7 @@
 				9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */,
 				9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */,
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
+				9AE0DAFC1F3F0D7B00925A9A /* AccountInfo.m in Sources */,
 				9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */,
 				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
@@ -545,7 +552,6 @@
 				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
 				9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */,
 				9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */,
-				9AC311C51F3892C80036B5EF /* Account.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

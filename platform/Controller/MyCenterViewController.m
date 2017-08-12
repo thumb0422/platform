@@ -7,9 +7,10 @@
 //
 
 #import "MyCenterViewController.h"
-#import "Account.h"
+#import "AccountInfo.h"
 @interface MyCenterViewController (){
-    BOOL isLogin;
+    BOOL _isLogin;
+    AccountInfo *_accountInfo;
 }
 
 @end
@@ -19,29 +20,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *registBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, NAV_STATUS_HEIGHT + 20, 200, 44)];
-    [registBtn setBackgroundColor:[UIColor redColor]];
-    [registBtn bk_whenTapped:^{
-       UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    /*
+    UILabel *loginLabel = [[UILabel alloc] init];
+    [loginLabel setBackgroundColor:[UIColor yellowColor]];
+    [loginLabel setTextColor:[UIColor blueColor]];
+    [loginLabel setTextAlignment:NSTextAlignmentCenter];
+    [loginLabel setText:_isLogin ? _accountInfo.accountName:@"未登录"];
+    [loginLabel bk_whenTapped:^{
+        UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
         UIViewController *vc = [loginSB instantiateViewControllerWithIdentifier:@"LoginViewController"];
         [self.navigationController pushViewController:vc animated:NO];
     }];
-    [self.topView addSubview:registBtn];
+    [self.topView addSubview:loginLabel];
+    [loginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.topView.mas_centerX);
+        make.width.equalTo(@100);
+        make.bottom.equalTo(self.topView.mas_bottom).offset(-30);
+        make.height.equalTo(@44);
+    }];
+    */
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 200, 44)];
+    [btn setTitle:_isLogin ? _accountInfo.accountName:@"未登录" forState:UIControlStateNormal];
+    [btn bk_whenTapped:^{
+        UIViewController *nextVC = SelfSBVC(@"Login", @"LoginViewController");
+        [self.navigationController pushViewController:nextVC animated:NO];
+    }];
+    [self.topView addSubview:btn];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    isLogin = [self isLogin];
+    [self.navigationController setNavigationBarHidden:YES];
+    _accountInfo = [self isLogin];
+    _isLogin = _accountInfo.isValid;
 }
 
--(BOOL)isLogin{
-    BOOL result = false;
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    RLMResults *qryResult = [Account allObjects];
-    if (qryResult.count > 0){
-        
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+-(AccountInfo *)isLogin{
+    RLMResults<AccountInfo *> *accountInfos = [AccountInfo allObjects];
+    for (int i = 0;i<accountInfos.count;i++){
+        AccountInfo *accountTmp = [accountInfos objectAtIndex:i];
+        if (accountTmp.isValid){
+            return accountTmp;
+        }
     }
-    return result;
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {

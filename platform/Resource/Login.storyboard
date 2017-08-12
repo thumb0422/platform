@@ -59,6 +59,9 @@
                                 <state key="disabled" title="注          册"/>
                                 <state key="selected" title="注          册"/>
                                 <state key="highlighted" title="注          册"/>
+                                <connections>
+                                    <action selector="registClick:" destination="HYo-Vp-OGk" eventType="touchUpInside" id="2PI-er-wzD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7li-Fh-Lo1">
                                 <rect key="frame" x="100" y="181" width="205" height="44"/>
@@ -124,6 +127,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T1S-wL-18g"/>
+                    <connections>
+                        <outlet property="phoneNo" destination="NZp-Kh-oLC" id="uuj-4d-wwg"/>
+                        <outlet property="pwd" destination="7li-Fh-Lo1" id="iJ4-LP-7fg"/>
+                        <outlet property="registBtn" destination="mWW-Oj-it1" id="y5R-LM-CXq"/>
+                        <outlet property="verfiNo" destination="c3r-CS-Z0d" id="2gt-7a-5F4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggF-v6-88r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,12 +195,15 @@
                                     <constraint firstAttribute="height" constant="44" id="xxe-UD-Egw"/>
                                 </constraints>
                                 <state key="normal" title="登        录"/>
+                                <connections>
+                                    <action selector="loginClick:" destination="mJM-nF-zXk" eventType="touchUpInside" id="8cY-vw-43u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-es-bvl">
                                 <rect key="frame" x="15" y="412" width="290" height="44"/>
                                 <state key="normal" title="快速注册"/>
                                 <connections>
-                                    <segue destination="HYo-Vp-OGk" kind="show" id="ACL-5d-gQW"/>
+                                    <action selector="registClick:" destination="mJM-nF-zXk" eventType="touchUpInside" id="Huq-Gm-XJM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,10 +234,16 @@
                             <constraint firstItem="osg-oV-EBF" firstAttribute="height" secondItem="RZb-DA-zjC" secondAttribute="height" id="zuX-gI-ffc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountNo" destination="RZb-DA-zjC" id="Ads-X8-tBW"/>
+                        <outlet property="loginBtn" destination="8Gz-8r-dLR" id="POx-je-cNy"/>
+                        <outlet property="pwd" destination="osg-oV-EBF" id="dkz-yQ-rQy"/>
+                        <outlet property="registBtn" destination="nXZ-es-bvl" id="iSk-pt-DlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW7-69-vxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="-44"/>
+            <point key="canvasLocation" x="-1478" y="-44"/>
         </scene>
     </scenes>
 </document>

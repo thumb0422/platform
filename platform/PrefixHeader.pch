@@ -27,6 +27,7 @@
 #import <BlocksKit/BlocksKit.h>
 
 #import <Realm/Realm.h>
+#import <Masonry/Masonry.h>
 #endif /* PrefixHeader_pch */
 
 

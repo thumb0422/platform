@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseNavController.h"
-//#import "Account.h"
+#import "MigrationDB.h"
 @interface AppDelegate ()
 
 @end
@@ -32,6 +32,9 @@
     [self setTabBarItems:tabVC];
     self.window.rootViewController = tabVC;
     [self setNavBarAppearence];
+    
+    //设置默认Realm 与 数据迁移
+    [MigrationDB migrationRealm];
     [self.window makeKeyAndVisible];
     return YES;
 }
