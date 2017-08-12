@@ -8,6 +8,10 @@
 
 #import "AccountInfo.h"
 
+@implementation Account
+
+@end
+
 @implementation AccountInfo
 
 + (NSString *)primaryKey{

@@ -35,10 +35,17 @@
     accountInfo.accountPWD = self.pwd.text;
     accountInfo.isValid = @YES;
     
+    Account *account = [[Account alloc] initWithValue:@{@"mobileNo":self.phoneNo.text,
+                                                        @"isValid":@YES
+                                                        }];
+    
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
     [realm addObject:accountInfo];
+    [realm addObject:account];
     [realm commitWriteTransaction];
+    //注册并登录
+    
     
     //弹窗提示 注册
     SCLAlertView *alert = [[SCLAlertView alloc] init];

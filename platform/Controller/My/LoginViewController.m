@@ -50,10 +50,14 @@
     }
 }
 
--(void)loginDB:(AccountInfo *)account{
+-(void)loginDB:(AccountInfo *)accountInfo{
+    Account *account = [[Account alloc] initWithValue:@{@"mobileNo":accountInfo.mobileNo,
+                                                        @"isValid":@YES
+                                                        }];
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
-    account.isValid = @YES;
+    accountInfo.isValid = @YES;
+    [realm addObject:accountInfo];
     [realm addObject:account];
     [realm commitWriteTransaction];
 }
