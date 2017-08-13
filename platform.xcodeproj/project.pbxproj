@@ -13,7 +13,6 @@
 		9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */; };
 		9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */; };
 		9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8D51F2F605300DA8604 /* Detail.storyboard */; };
-		9A31C8DC1F2FEE4B00DA8604 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */; };
 		9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */; };
 		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
 		9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */; };
@@ -72,8 +71,6 @@
 		9A1F5BA11F01D32400525E5C /* MyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
 		9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
 		9A31C8D51F2F605300DA8604 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-		9A31C8DA1F2FEE4B00DA8604 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9A3969F21F3717F1004B597B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -245,8 +242,6 @@
 		9A31C8D91F2FEE1800DA8604 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				9A31C8DA1F2FEE4B00DA8604 /* DetailViewController.h */,
-				9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */,
 				9AE0DAFD1F4044AB00925A9A /* ProductDetailViewController.h */,
 				9AE0DAFE1F4044AB00925A9A /* ProductDetailViewController.m */,
 			);
@@ -534,7 +529,6 @@
 				9AC311CB1F38A0260036B5EF /* NSString+Utility.m in Sources */,
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
-				9A31C8DC1F2FEE4B00DA8604 /* DetailViewController.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
