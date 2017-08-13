@@ -24,7 +24,7 @@
 
 @implementation HomeViewController
 
--(void)awakeFromNib{
+- (void)awakeFromNib{
     [super awakeFromNib];
 }
 
@@ -37,17 +37,17 @@
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
     self.mainTV.allowsSelection = NO;
-     [self wr_setNavBarBackgroundAlpha:0];
+    [self wr_setNavBarBackgroundAlpha:0];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"详情" style:UIBarButtonItemStylePlain target:self action:@selector(onRightClick)];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-//    [self.navigationController setNavigationBarHidden:NO];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +55,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y;
     if (offsetY > -80)
     {
@@ -94,66 +94,48 @@
     NSString *identify = [_identifyArray objectAtIndex:indexPath.row];
     BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify forIndexPath:indexPath];
     __block ProductInfoModel *dataModel = nil;
-    /*
+    
     if (indexPath.row == 0){
         cell = (HomeHeaderCell *)cell;
         cell.cellClickBlock = ^(ProductInfoModel *data) {
             dataModel = data;
-            UIStoryboard *detailSB = [UIStoryboard storyboardWithName:@"Detail" bundle:nil];
-            UIViewController * nextVC = [detailSB instantiateViewControllerWithIdentifier:@"DetailViewController"];
-            [self.navigationController pushViewController:nextVC animated:YES];
+            UIViewController *dtlVC = SelfSBVC(@"Detail", @"ProductDetailViewController");
+            [self.navigationController pushViewController:dtlVC animated:YES];
         };
-    }
-    */
-    switch (indexPath.row) {
-        case 0:
-            cell = (HomeHeaderCell *)cell;
-            cell.cellClickBlock = ^(ProductInfoModel *data) {
-                dataModel = data;
-            };
-            break;
-        case 1:
-            cell = (HomeCollectionTableViewCell *)cell;
-            cell.cellClickBlock = ^(ProductInfoModel *data) {
-                dataModel = data;
-            };
-            break;
-        case 2:
-            cell = (HomeImageTableViewCell *)cell;
-            cell.imageView.image = [UIImage imageNamed:@"topBanner2.jpg"];
-            cell.cellClickBlock = ^(ProductInfoModel *data) {
-                dataModel = data;
-            };
-            break;
-        case 3:
-            {
-                HomeTopBottomTableViewCell *tmpCell = (HomeTopBottomTableViewCell *)cell;
-                tmpCell.imageArray = @[@"hotSale1.png",@"hotSale2.png",@"hotSale3.png"];
-                tmpCell.cellClickBlock = ^(ProductInfoModel *data) {
-                    dataModel = data;
-                };
-                return tmpCell;
-            }
-            break;
-        case 4:
-            cell = (HomeImageTableViewCell *)cell;
-            cell.imageView.image = [UIImage imageNamed:@"midBanner.png"];
-            cell.cellClickBlock = ^(ProductInfoModel *data) {
-                dataModel = data;
-            };
-            break;
-        case 5:
+    }else if (indexPath.row == 1){
+        cell = (HomeCollectionTableViewCell *)cell;
+        cell.cellClickBlock = ^(ProductInfoModel *data) {
+            dataModel = data;
+        };
+    }else if (indexPath.row == 2){
+        cell = (HomeImageTableViewCell *)cell;
+        cell.imageView.image = [UIImage imageNamed:@"topBanner2.jpg"];
+        cell.cellClickBlock = ^(ProductInfoModel *data) {
+            dataModel = data;
+        };
+    }else if (indexPath.row == 3){
         {
-            HomeCompsiteTableViewCell *tmpCell = (HomeCompsiteTableViewCell *)cell;
-            tmpCell.imageArray = @[@"newP1",@"newP2",@"newP3",@"newP4",@"newP5"];
-            cell.cellClickBlock = ^(ProductInfoModel *data) {
-                NSLog(@"111---name=%@,tag=%@",data.productName,data.productId);
+            HomeTopBottomTableViewCell *tmpCell = (HomeTopBottomTableViewCell *)cell;
+            tmpCell.imageArray = @[@"hotSale1.png",@"hotSale2.png",@"hotSale3.png"];
+            tmpCell.cellClickBlock = ^(ProductInfoModel *data) {
+                dataModel = data;
             };
             return tmpCell;
         }
-            break;
-        default:
-            break;
+    }else if (indexPath.row == 4){
+        cell = (HomeImageTableViewCell *)cell;
+        cell.imageView.image = [UIImage imageNamed:@"midBanner.png"];
+        cell.cellClickBlock = ^(ProductInfoModel *data) {
+            dataModel = data;
+        };
+    }else if (indexPath.row == 5){
+        HomeCompsiteTableViewCell *tmpCell = (HomeCompsiteTableViewCell *)cell;
+        tmpCell.imageArray = @[@"newP1",@"newP2",@"newP3",@"newP4",@"newP5"];
+        cell.cellClickBlock = ^(ProductInfoModel *data) {
+            NSLog(@"111---name=%@,tag=%@",data.productName,data.productId);
+        };
+    }else {
+        
     }
     return cell;
 }

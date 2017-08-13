@@ -44,6 +44,7 @@
 		9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA91B1F35CDB00060FA66 /* UnLoginView.m */; };
 		9AE0DAF91F3EC18700925A9A /* MigrationDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0DAF81F3EC18700925A9A /* MigrationDB.m */; };
 		9AE0DAFC1F3F0D7B00925A9A /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */; };
+		9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0DAFE1F4044AB00925A9A /* ProductDetailViewController.m */; };
 		9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */; };
 		9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,8 @@
 		9AE0DAF81F3EC18700925A9A /* MigrationDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MigrationDB.m; sourceTree = "<group>"; };
 		9AE0DAFA1F3F0D7B00925A9A /* AccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountInfo.h; sourceTree = "<group>"; };
 		9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountInfo.m; sourceTree = "<group>"; };
+		9AE0DAFD1F4044AB00925A9A /* ProductDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
+		9AE0DAFE1F4044AB00925A9A /* ProductDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCompsiteTableViewCell.h; sourceTree = "<group>"; };
 		9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCompsiteTableViewCell.m; sourceTree = "<group>"; };
 		9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCompsiteTableViewCell.xib; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 			children = (
 				9A31C8DA1F2FEE4B00DA8604 /* DetailViewController.h */,
 				9A31C8DB1F2FEE4B00DA8604 /* DetailViewController.m */,
+				9AE0DAFD1F4044AB00925A9A /* ProductDetailViewController.h */,
+				9AE0DAFE1F4044AB00925A9A /* ProductDetailViewController.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */,
 				9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
+				9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
 				9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */,
 				9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */,

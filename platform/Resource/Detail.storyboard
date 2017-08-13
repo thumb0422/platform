@@ -9,50 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="xqx-kD-2Ym">
+        <!--Product Detail View Controller-->
+        <scene sceneID="J04-tJ-gkX">
             <objects>
-                <tableViewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FPa-pd-ktb" customClass="DetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3si-Dc-xGo">
+                <viewController storyboardIdentifier="ProductDetailViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H0d-er-Vu6" customClass="ProductDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8nU-Ps-fi8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qOD-4u-DWX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="txc-qC-weq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="a3P-5D-Dak">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a3P-5D-Dak" id="dJt-GR-gic">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="FPa-pd-ktb" id="V0b-Oz-f6z"/>
-                            <outlet property="delegate" destination="FPa-pd-ktb" id="nq2-sm-G2C"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="yzQ-1t-bSH"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GcT-Rc-Rxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDS-pK-Cnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-13"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="B9M-3t-ZOO">
-            <objects>
-                <navigationController id="yeg-nb-h6w" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Odo-lZ-xWR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="FPa-pd-ktb" kind="relationship" relationship="rootViewController" id="zKG-3B-deI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Kj-Mg-45B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-335" y="-14"/>
+            <point key="canvasLocation" x="-987" y="-209"/>
         </scene>
     </scenes>
 </document>
