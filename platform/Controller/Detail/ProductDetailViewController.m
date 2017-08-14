@@ -8,6 +8,8 @@
 
 #import "ProductDetailViewController.h"
 
+#define NAVBAR_CHANGE_POINT 50
+
 @interface ProductDetailViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView *bgScrollView;
 @property (nonatomic,strong) UIView *topView;
@@ -20,19 +22,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initNav];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.bgScrollView];
     [self initUI];
     [self.view addSubview:self.buyView];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > NAVBAR_CHANGE_POINT) {
+        CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + 64 - offsetY) / 64));
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.navigationController.navigationBar lt_reset];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.bgScrollView setContentSize:CGSizeMake(SCREEN_WIDTH, self.bottomView.bottom + NAV_HEIGHT)];
+}
+
+- (void)initNav{
+    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(leftBarClick)];
+    self.navigationItem.leftBarButtonItem = leftBar;
+    
+    self.navigationItem.title = @"";
+}
+
+- (void)leftBarClick{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)initUI{

@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-
 #import "HomeHeaderCell.h"
 #import "BaseTableViewCell.h"
 #import "HomeCollectionTableViewCell.h"
@@ -19,7 +18,6 @@
     NSArray *_identifyArray;
     NSArray *_rowHeightArray;
 }
-
 @end
 
 @implementation HomeViewController
@@ -37,9 +35,13 @@
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
     self.mainTV.allowsSelection = NO;
-    [self wr_setNavBarBackgroundAlpha:0];
     
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"详情" style:UIBarButtonItemStylePlain target:self action:@selector(onRightClick)];
+    UISearchBar *searchView = [[UISearchBar alloc] init];
+    searchView.backgroundColor = [UIColor clearColor];
+    searchView.placeholder = @"搜索";
+    searchView.delegate = self;
+    [searchView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAV_HEIGHT)];
+    self.navigationItem.titleView = searchView;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -55,31 +57,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY > -80)
-    {
-        [self changeNavBarAnimateWithIsClear:NO];
-    }
-    else
-    {
-        [self changeNavBarAnimateWithIsClear:YES];
-    }
-}
-
-- (void)changeNavBarAnimateWithIsClear:(BOOL)isClear
-{
-    __weak typeof(self) weakSelf = self;
-    [UIView animateWithDuration:0.6 animations:^
-     {
-         __strong typeof(self) pThis = weakSelf;
-         if (isClear == YES) {
-             [pThis wr_setNavBarBackgroundAlpha:0];
-         } else {
-             [pThis wr_setNavBarBackgroundAlpha:1.0];
-         }
-     }];
-}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

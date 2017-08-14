@@ -14,7 +14,8 @@
 #import "Utility.h"
 #import "UIView+Utils.h"
 #import "BaseTableViewCell.h"
-#import "WRNavigationBar.h"
+//#import "WRNavigationBar.h"
+#import "UINavigationBar+Awesome.h"
 #import "NSString+Utility.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>

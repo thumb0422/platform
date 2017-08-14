@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		1ECCEF903F1B44F5087B76F9 /* libPods-platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8589D09D31610A226BA /* libPods-platform.a */; };
 		6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8697EF1F0F7C66004ABF92 /* RFLayout.m */; };
+		9A1DE3531F41DDE3006927D0 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */; };
 		9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */; };
 		9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */; };
 		9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */; };
 		9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8D51F2F605300DA8604 /* Detail.storyboard */; };
 		9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */; };
 		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
-		9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */; };
 		9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */; };
 		9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D121F375DF400FCC1F5 /* DBManager.m */; };
 		9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4451F17B8B900054505 /* HomeViewController.m */; };
@@ -64,6 +64,8 @@
 		6C8697EF1F0F7C66004ABF92 /* RFLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFLayout.m; sourceTree = "<group>"; };
 		962AC8589D09D31610A226BA /* libPods-platform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-platform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A156199DA1F3D027ACBFD50 /* Pods-platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-platform/Pods-platform.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1DE3511F41DDD5006927D0 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
 		9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyInfoViewController.h; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9A3969F21F3717F1004B597B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
-		9A7D79811F36D7FB00D74EB6 /* WRNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		9AA70D0E1F37493100FCC1F5 /* RegistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		9AA70D111F375DF400FCC1F5 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		6C8697ED1F0F7C59004ABF92 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
-				9A7D79811F36D7FB00D74EB6 /* WRNavigationBar.h */,
-				9A7D79801F36D7FB00D74EB6 /* WRNavigationBar.m */,
+				9A1DE3511F41DDD5006927D0 /* UINavigationBar+Awesome.h */,
+				9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */,
 				6C8697EE1F0F7C66004ABF92 /* RFLayout.h */,
 				6C8697EF1F0F7C66004ABF92 /* RFLayout.m */,
 			);
@@ -538,7 +538,7 @@
 				9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
 				9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */,
-				9A7D79821F36D80200D74EB6 /* WRNavigationBar.m in Sources */,
+				9A1DE3531F41DDE3006927D0 /* UINavigationBar+Awesome.m in Sources */,
 				9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */,
 				9AACF44A1F17C0D500054505 /* HomeCollectionCell.m in Sources */,
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,

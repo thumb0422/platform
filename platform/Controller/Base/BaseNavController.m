@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self wr_setNavBarBackgroundAlpha:0];
-    [self.navigationBar wr_setBarButtonItemsAlpha:0 hasSystemBackIndicator:YES];
+//    [self.navigationBar wr_setBarButtonItemsAlpha:0 hasSystemBackIndicator:YES];
 }
 
 - (void)didReceiveMemoryWarning {

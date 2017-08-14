@@ -75,6 +75,7 @@
 
 - (void)setNavBarAppearence
 {
+    /*
     UIColor *MainNavBarColor = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
     // 设置导航栏默认的背景颜色
     [UIColor wr_setDefaultNavBarBarTintColor:MainNavBarColor];
@@ -85,7 +86,14 @@
     // 统一设置状态栏样式
     [UIColor wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
     // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
-//     [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
+     [UIColor wr_setDefaultNavBarShadowImageHidden:YES];
+    */
+    
+//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]];
+//    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+//                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 @end
