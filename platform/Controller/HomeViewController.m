@@ -18,6 +18,8 @@
     NSArray *_identifyArray;
     NSArray *_rowHeightArray;
 }
+
+@property (nonatomic,strong) UISearchBar *searchView;
 @end
 
 @implementation HomeViewController
@@ -35,13 +37,21 @@
         [self.mainTV registerNib:[UINib nibWithNibName:obj bundle:nil] forCellReuseIdentifier:obj];
     }];
     self.mainTV.allowsSelection = NO;
-    
-    UISearchBar *searchView = [[UISearchBar alloc] init];
-    searchView.backgroundColor = [UIColor clearColor];
-    searchView.placeholder = @"搜索";
-    searchView.delegate = self;
-    [searchView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAV_HEIGHT)];
-    self.navigationItem.titleView = searchView;
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
+    self.navigationItem.titleView = self.searchView;
+}
+
+- (UISearchBar *)searchView{
+    if (!_searchView){
+        _searchView = [[UISearchBar alloc] init];
+        _searchView.backgroundColor = [UIColor clearColor];
+        _searchView.placeholder = @"搜索";
+        _searchView.delegate = self;
+        [_searchView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAV_HEIGHT)];
+        
+        [_searchView updateBGClear:[UIColor clearColor]];
+    }
+    return _searchView;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

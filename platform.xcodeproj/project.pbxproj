@@ -10,6 +10,8 @@
 		1ECCEF903F1B44F5087B76F9 /* libPods-platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8589D09D31610A226BA /* libPods-platform.a */; };
 		6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8697EF1F0F7C66004ABF92 /* RFLayout.m */; };
 		9A1DE3531F41DDE3006927D0 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */; };
+		9A1DE3561F4260A9006927D0 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */; };
+		9A1DE3591F4265CB006927D0 /* UISearchBar+PF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */; };
 		9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */; };
 		9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */; };
 		9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */; };
@@ -66,6 +68,10 @@
 		9A156199DA1F3D027ACBFD50 /* Pods-platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-platform/Pods-platform.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1DE3511F41DDD5006927D0 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		9A1DE3541F4260A8006927D0 /* UIImage+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
+		9A1DE3571F4265CB006927D0 /* UISearchBar+PF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+PF.h"; sourceTree = "<group>"; };
+		9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+PF.m"; sourceTree = "<group>"; };
 		9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
 		9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyInfoViewController.h; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				9AFF3B3F1F1CEC1900100916 /* HomeCompsiteTableViewCell.h */,
 				9AFF3B401F1CEC1900100916 /* HomeCompsiteTableViewCell.m */,
 				9AFF3B411F1CEC1900100916 /* HomeCompsiteTableViewCell.xib */,
+				9A1DE3571F4265CB006927D0 /* UISearchBar+PF.h */,
+				9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +289,8 @@
 				9AC311CA1F38A0260036B5EF /* NSString+Utility.m */,
 				9AE0DAF71F3EC18700925A9A /* MigrationDB.h */,
 				9AE0DAF81F3EC18700925A9A /* MigrationDB.m */,
+				9A1DE3541F4260A8006927D0 /* UIImage+Utility.h */,
+				9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -533,6 +543,7 @@
 				9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
 				9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */,
+				9A1DE3561F4260A9006927D0 /* UIImage+Utility.m in Sources */,
 				9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */,
@@ -548,6 +559,7 @@
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,
 				9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */,
+				9A1DE3591F4265CB006927D0 /* UISearchBar+PF.m in Sources */,
 				9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */,
 				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
 				9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */,

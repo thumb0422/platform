@@ -17,6 +17,8 @@
 //#import "WRNavigationBar.h"
 #import "UINavigationBar+Awesome.h"
 #import "NSString+Utility.h"
+#import "UIImage+Utility.h"
+#import "UISearchBar+PF.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <SCLAlertView.h>

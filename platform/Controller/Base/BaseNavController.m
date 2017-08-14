@@ -16,13 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self wr_setNavBarBackgroundAlpha:0];
-//    [self.navigationBar wr_setBarButtonItemsAlpha:0 hasSystemBackIndicator:YES];
+    self.navigationBar.shadowImage = [UIImage new];//隐藏导航条下的一条线
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
