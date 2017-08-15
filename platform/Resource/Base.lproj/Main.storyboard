@@ -90,9 +90,17 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbQ-bN-h4s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lg_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-v5-4d2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="HVo-v5-4d2" firstAttribute="leading" secondItem="gbQ-bN-h4s" secondAttribute="leading" id="323-2O-YEU"/>
                                     <constraint firstAttribute="height" constant="200" id="Ovg-3n-I6m"/>
+                                    <constraint firstAttribute="trailing" secondItem="HVo-v5-4d2" secondAttribute="trailing" id="Sv2-Je-NT6"/>
+                                    <constraint firstItem="HVo-v5-4d2" firstAttribute="top" secondItem="gbQ-bN-h4s" secondAttribute="top" id="dDj-pY-EDM"/>
+                                    <constraint firstAttribute="bottom" secondItem="HVo-v5-4d2" secondAttribute="bottom" id="opa-fJ-kOA"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-d4-Hom">
@@ -121,4 +129,7 @@
             <point key="canvasLocation" x="322" y="61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lg_logo" width="58" height="71"/>
+    </resources>
 </document>
