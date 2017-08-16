@@ -13,7 +13,7 @@
     Account *_account;
     AccountInfo *_accountInfo;
 }
-
+@property (nonatomic,strong) UIButton *topRegistBtn;
 @end
 
 @implementation MyCenterViewController
@@ -21,56 +21,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /*
-    UILabel *loginLabel = [[UILabel alloc] init];
-    [loginLabel setBackgroundColor:[UIColor yellowColor]];
-    [loginLabel setTextColor:[UIColor blueColor]];
-    [loginLabel setTextAlignment:NSTextAlignmentCenter];
-    [loginLabel setText:_isLogin ? _accountInfo.accountName:@"未登录"];
-    [loginLabel bk_whenTapped:^{
-        UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-        UIViewController *vc = [loginSB instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        [self.navigationController pushViewController:vc animated:NO];
-    }];
-    [self.topView addSubview:loginLabel];
-    [loginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypePlain];
+    [btn addTarget:self action:@selector(onRegistClick:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    self.topRegistBtn = btn;
+    [self.topView addSubview:self.topRegistBtn];
+    [self.topRegistBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.topView.mas_centerX);
         make.width.equalTo(@100);
-        make.bottom.equalTo(self.topView.mas_bottom).offset(-30);
-        make.height.equalTo(@44);
+        make.top.equalTo(self.topImgView.mas_bottom).offset(5);
+        make.bottom.equalTo(self.topView.mas_bottom).offset(-5);
     }];
-    */
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 200, 44)];
-    [btn setTitle:_isLogin ? _accountInfo.accountName:@"未登录" forState:UIControlStateNormal];
-    [btn bk_whenTapped:^{
+}
+
+- (void)onRegistClick:(UIButton *)sender{
+    if (_isLogin){
+        UIViewController *nextVC = SelfSBVC(@"Login", @"SettingViewController");
+        [self.navigationController pushViewController:nextVC animated:NO];
+    }else{
         UIViewController *nextVC = SelfSBVC(@"Login", @"LoginViewController");
         [self.navigationController pushViewController:nextVC animated:NO];
-    }];
-    [self.topView addSubview:btn];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];
-    _account = [self isLogin];
-    _accountInfo = [[AccountInfo objectsWhere:@"mobileNo = %@ and isValid = %@",_account.mobileNo,@YES] firstObject];
-    _isLogin = _accountInfo.isValid;
-}
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
-}
-
--(Account *)isLogin{
-    RLMResults<Account *> *accountInfos = [Account allObjects];
-    for (int i = 0;i<accountInfos.count;i++){
-        Account *accountTmp = [accountInfos objectAtIndex:i];
-        if (accountTmp.isValid){
-            return accountTmp;
-        }
+    _account = [[Account allObjects] firstObject];
+    _isLogin = false;
+    if (_account != nil){
+        _accountInfo = [[AccountInfo objectsWhere:@"mobileNo = %@ and isValid = %@",_account.mobileNo,@YES] firstObject];
+        _isLogin = _accountInfo.isValid;
     }
-    return nil;
+    
+    [self.topRegistBtn setTitle:_isLogin ? [NSString stringWithFormat:@"%@已登录",_accountInfo.accountName]:@"未登录" forState:UIControlStateNormal];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {

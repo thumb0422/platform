@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登录";
     // Do any additional setup after loading the view.
 }
 
@@ -51,15 +52,15 @@
 }
 
 -(void)loginDB:(AccountInfo *)accountInfo{
-    Account *account = [[Account alloc] initWithValue:@{@"mobileNo":accountInfo.mobileNo,
-                                                        @"isValid":@YES
-                                                        }];
+    Account *account = [[Account alloc] initWithValue:@{@"mobileNo":accountInfo.mobileNo}];
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
     accountInfo.isValid = @YES;
     [realm addObject:accountInfo];
-    [realm addObject:account];
+    //todo  怎么删除历史数据
+//    [realm addObject:account];
     [realm commitWriteTransaction];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)regist{

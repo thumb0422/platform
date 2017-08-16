@@ -20,6 +20,7 @@
 #import "UIImage+Utility.h"
 #import "UISearchBar+PF.h"
 #import "HMSegmentedControl.h"
+#import "BaseViewController.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <SCLAlertView.h>

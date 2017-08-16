@@ -138,6 +138,44 @@
             </objects>
             <point key="canvasLocation" x="-333.75" y="-44.366197183098592"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="tWd-7t-Tfy">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CZq-2Q-X84" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RoC-Se-LMw"/>
+                        <viewControllerLayoutGuide type="bottom" id="AzB-9h-JuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H8f-ef-eJb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuR-Xh-mRP">
+                                <rect key="frame" x="15" y="474" width="290" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rKq-Zk-j0f"/>
+                                </constraints>
+                                <state key="normal" title="注                    销"/>
+                                <connections>
+                                    <action selector="logoutClick:" destination="CZq-2Q-X84" eventType="touchDragInside" id="I7N-PQ-XWK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AzB-9h-JuE" firstAttribute="top" secondItem="BuR-Xh-mRP" secondAttribute="bottom" constant="50" id="DfR-rz-8xD"/>
+                            <constraint firstAttribute="trailing" secondItem="BuR-Xh-mRP" secondAttribute="trailing" constant="15" id="V3F-af-4aL"/>
+                            <constraint firstItem="BuR-Xh-mRP" firstAttribute="leading" secondItem="H8f-ef-eJb" secondAttribute="leading" constant="15" id="s65-C5-yXx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="BuR-Xh-mRP" id="nI6-Z9-Fra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzC-9h-vHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="-56"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="0ru-Ha-rzd">
             <objects>

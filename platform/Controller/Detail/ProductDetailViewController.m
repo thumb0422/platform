@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initNav];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     self.view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.bgScrollView];
@@ -43,15 +42,6 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.bgScrollView setContentSize:CGSizeMake(SCREEN_WIDTH, self.bottomView.bottom + NAV_HEIGHT)];
-}
-
-- (void)initNav{
-    UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(leftBarClick)];
-    self.navigationItem.leftBarButtonItem = leftBar;
-}
-
-- (void)leftBarClick{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)initUI{

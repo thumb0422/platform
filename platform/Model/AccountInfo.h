@@ -11,7 +11,6 @@
 //记录当前最后一个登录的帐号，只有一条记录
 @interface Account : RLMObject
 @property NSString *mobileNo;
-@property BOOL isValid;
 @end
 
 @interface AccountInfo : RLMObject

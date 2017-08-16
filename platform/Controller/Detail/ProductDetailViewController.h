@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProductDetailViewController : UIViewController
+@interface ProductDetailViewController :BaseViewController
 
 @property (nonatomic,copy) NSString *productId;
 @end

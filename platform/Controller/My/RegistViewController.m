@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"注册帐号";
     // Do any additional setup after loading the view.
 }
 
