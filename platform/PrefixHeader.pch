@@ -21,6 +21,8 @@
 #import "UISearchBar+PF.h"
 #import "HMSegmentedControl.h"
 #import "BaseViewController.h"
+#import "UserManager.h"
+#import "UserModel.h"
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import <SCLAlertView.h>

@@ -7,11 +7,8 @@
 //
 
 #import "MyCenterViewController.h"
-#import "AccountInfo.h"
 @interface MyCenterViewController (){
     BOOL _isLogin;
-    Account *_account;
-    AccountInfo *_accountInfo;
 }
 @property (nonatomic,strong) UIButton *topRegistBtn;
 @end
@@ -46,19 +43,13 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    _account = [[Account allObjects] firstObject];
-    _isLogin = false;
-    if (_account != nil){
-        _accountInfo = [[AccountInfo objectsWhere:@"mobileNo = %@ and isValid = %@",_account.mobileNo,@YES] firstObject];
-        _isLogin = _accountInfo.isValid;
-    }
-    
-    [self.topRegistBtn setTitle:_isLogin ? [NSString stringWithFormat:@"%@已登录",_accountInfo.accountName]:@"未登录" forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    _isLogin = [UserManager getInstance].userModel.isLogin;
+    [self.topRegistBtn setTitle:_isLogin ? [NSString stringWithFormat:@"%@已登录",[UserManager getInstance].userModel.mobileNo ]:@"未登录" forState:UIControlStateNormal];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

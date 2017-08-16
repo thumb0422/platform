@@ -39,7 +39,6 @@
             SCLAlertView *alert = [[SCLAlertView alloc] init];
             [alert showError:self title:@"提示" subTitle:@"密码错误" closeButtonTitle:@"确定" duration:0.0f];
         }
-        
     }else {
         //弹窗提示 注册
         SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -52,14 +51,20 @@
 }
 
 -(void)loginDB:(AccountInfo *)accountInfo{
-    Account *account = [[Account alloc] initWithValue:@{@"mobileNo":accountInfo.mobileNo}];
+    RLMResults<Account*> *accounts = [Account allObjects];
+    Account * addAccount = [[Account alloc] initWithValue:@{@"mobileNo":accountInfo.mobileNo}];
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
+    [realm deleteObjects:accounts];
+    [realm addObject:addAccount];
     accountInfo.isValid = @YES;
     [realm addObject:accountInfo];
-    //todo  怎么删除历史数据
-//    [realm addObject:account];
     [realm commitWriteTransaction];
+    UserModel *model = [[UserModel alloc] init];
+    model.accountName = self.accountNo.text;
+    model.mobileNo = self.accountNo.text;
+    model.isLogin = YES;
+    [UserManager getInstance].userModel = model;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -70,22 +75,6 @@
 
 - (IBAction)registClick:(id)sender {
     [self regist];
-}
-
-- (IBAction)registClick1:(id)sender {
-    SCLAlertView *alertView = [[SCLAlertView alloc] initWithNewWindow];
-    SCLButton *successBtn = [alertView addButton:@"返回" actionBlock:^{
-       [self.navigationController popViewControllerAnimated:YES];
-    }];
-    successBtn.buttonFormatBlock = ^NSDictionary *{
-        NSMutableDictionary *buttonConfig = [[NSMutableDictionary alloc] init];
-        buttonConfig[@"backgroundColor"] = [UIColor whiteColor];
-        buttonConfig[@"textColor"] = [UIColor blackColor];
-        buttonConfig[@"borderWidth"] = @2.0f;
-        buttonConfig[@"borderColor"] = [UIColor greenColor];
-        return buttonConfig;
-    };
-    [alertView showSuccess:@"注册提示" subTitle:@"您已经注册成功" closeButtonTitle:@"确定" duration:0.0f];
 }
 
 - (void)didReceiveMemoryWarning {

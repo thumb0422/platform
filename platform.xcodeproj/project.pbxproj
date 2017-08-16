@@ -20,6 +20,9 @@
 		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
 		9A4C929A1F43354E006AC942 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C92991F433544006AC942 /* HMSegmentedControl.m */; };
 		9A4C929D1F4487DC006AC942 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C929C1F4487DC006AC942 /* SettingViewController.m */; };
+		9A4C92A01F44962D006AC942 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C929F1F44962D006AC942 /* UserModel.m */; };
+		9A4C92A31F44969B006AC942 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C92A21F44969B006AC942 /* UserManager.m */; };
+		9A4C92A61F450989006AC942 /* ResetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C92A51F450989006AC942 /* ResetPWDViewController.m */; };
 		9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */; };
 		9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA70D121F375DF400FCC1F5 /* DBManager.m */; };
 		9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AACF4451F17B8B900054505 /* HomeViewController.m */; };
@@ -88,6 +91,12 @@
 		9A4C92991F433544006AC942 /* HMSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		9A4C929B1F4487DC006AC942 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		9A4C929C1F4487DC006AC942 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		9A4C929E1F44962D006AC942 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		9A4C929F1F44962D006AC942 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		9A4C92A11F44969B006AC942 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		9A4C92A21F44969B006AC942 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		9A4C92A41F450989006AC942 /* ResetPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPWDViewController.h; sourceTree = "<group>"; };
+		9A4C92A51F450989006AC942 /* ResetPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPWDViewController.m; sourceTree = "<group>"; };
 		9AA70D0E1F37493100FCC1F5 /* RegistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		9AA70D111F375DF400FCC1F5 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
@@ -239,6 +248,8 @@
 				9AACF4A51F1B266B00054505 /* ProductInfoModel.m */,
 				9AE0DAFA1F3F0D7B00925A9A /* AccountInfo.h */,
 				9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */,
+				9A4C929E1F44962D006AC942 /* UserModel.h */,
+				9A4C929F1F44962D006AC942 /* UserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +284,8 @@
 				9AA70D0F1F37493100FCC1F5 /* RegistViewController.m */,
 				9A4C929B1F4487DC006AC942 /* SettingViewController.h */,
 				9A4C929C1F4487DC006AC942 /* SettingViewController.m */,
+				9A4C92A41F450989006AC942 /* ResetPWDViewController.h */,
+				9A4C92A51F450989006AC942 /* ResetPWDViewController.m */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -301,6 +314,8 @@
 				9AE0DAF81F3EC18700925A9A /* MigrationDB.m */,
 				9A1DE3541F4260A8006927D0 /* UIImage+Utility.h */,
 				9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */,
+				9A4C92A11F44969B006AC942 /* UserManager.h */,
+				9A4C92A21F44969B006AC942 /* UserManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -549,6 +564,7 @@
 				9AC311CB1F38A0260036B5EF /* NSString+Utility.m in Sources */,
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
+				9A4C92A31F44969B006AC942 /* UserManager.m in Sources */,
 				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
@@ -567,6 +583,7 @@
 				9AC8CA9D1F007F1300E11E3C /* main.m in Sources */,
 				9AE0DAFC1F3F0D7B00925A9A /* AccountInfo.m in Sources */,
 				9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */,
+				9A4C92A01F44962D006AC942 /* UserModel.m in Sources */,
 				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,
@@ -575,6 +592,7 @@
 				9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */,
 				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
 				9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */,
+				9A4C92A61F450989006AC942 /* ResetPWDViewController.m in Sources */,
 				9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
