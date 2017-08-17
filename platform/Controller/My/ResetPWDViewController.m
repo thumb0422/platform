@@ -9,7 +9,8 @@
 #import "ResetPWDViewController.h"
 
 @interface ResetPWDViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *pwdNew;
+@property (weak, nonatomic) IBOutlet UITextField *pwdNewConfirm;
 @end
 
 @implementation ResetPWDViewController
@@ -17,21 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"密码重置";
+}
+- (IBAction)confirmClick:(id)sender {
+    //重置密码
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

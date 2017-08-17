@@ -8,6 +8,6 @@
 
 #import "BaseNavController.h"
 
-@interface ResetPWDViewController : BaseNavController
+@interface ResetPWDViewController : BaseViewController
 
 @end
