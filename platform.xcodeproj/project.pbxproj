@@ -18,6 +18,7 @@
 		9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8D51F2F605300DA8604 /* Detail.storyboard */; };
 		9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */; };
 		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
+		9A4154271F45DF6C00C02D3D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4154261F45DF6C00C02D3D /* CategoryViewController.m */; };
 		9A4C929A1F43354E006AC942 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C92991F433544006AC942 /* HMSegmentedControl.m */; };
 		9A4C929D1F4487DC006AC942 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C929C1F4487DC006AC942 /* SettingViewController.m */; };
 		9A4C92A01F44962D006AC942 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C929F1F44962D006AC942 /* UserModel.m */; };
@@ -87,6 +88,8 @@
 		9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9A3969F21F3717F1004B597B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9A4154251F45DF6C00C02D3D /* CategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		9A4154261F45DF6C00C02D3D /* CategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		9A4C92981F433544006AC942 /* HMSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
 		9A4C92991F433544006AC942 /* HMSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		9A4C929B1F4487DC006AC942 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				9A31C8D91F2FEE1800DA8604 /* Detail */,
 				9AACF4441F17B8B900054505 /* HomeViewController.h */,
 				9AACF4451F17B8B900054505 /* HomeViewController.m */,
+				9A4154251F45DF6C00C02D3D /* CategoryViewController.h */,
+				9A4154261F45DF6C00C02D3D /* CategoryViewController.m */,
 				9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */,
 				9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */,
 				9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */,
@@ -571,6 +576,7 @@
 				9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */,
 				9A1DE3561F4260A9006927D0 /* UIImage+Utility.m in Sources */,
 				9A4C929A1F43354E006AC942 /* HMSegmentedControl.m in Sources */,
+				9A4154271F45DF6C00C02D3D /* CategoryViewController.m in Sources */,
 				9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */,
 				9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */,
 				9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */,

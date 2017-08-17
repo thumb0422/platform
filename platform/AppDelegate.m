@@ -23,12 +23,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     BaseNavController *homeNav     = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"HomeViewController")];
+    
+//    BaseNavController *companyNav  = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CompanyInfoViewController")];
+    BaseNavController *categoryNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CategoryViewController")];
     BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"PurchaseViewController")];
-    BaseNavController *companyNav  = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CompanyInfoViewController")];
     BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"MyCenterViewController")];
     
     UITabBarController *tabVC = [[UITabBarController alloc] init];
-    tabVC.viewControllers = @[homeNav,purchaseNav,companyNav,myCenterNav];
+    tabVC.viewControllers = @[homeNav,categoryNav,purchaseNav/*,companyNav*/,myCenterNav];
     [self setTabBarItems:tabVC];
     self.window.rootViewController = tabVC;
     [self setNavBarAppearence];
@@ -63,11 +65,12 @@
 
 - (void)setTabBarItems:(UITabBarController*)tabBarVC
 {
-    NSArray *titles = @[@"首页", @"购买", @"公司介绍",@"我的"];
-    NSArray *normalImages = @[@"home_noraml", @"purchase_noraml",@"company_noraml", @"my_normal"];
-    NSArray *highlightImages = @[@"home_selected", @"purchase_selected",@"company_selected", @"my_selected"];
+    NSArray *titles = @[@"首页", @"分类", @"购物车",@"我的"];
+    NSArray *normalImages = @[@"home_noraml", @"company_noraml",@"purchase_noraml", @"my_normal"];
+    NSArray *highlightImages = @[@"home_selected", @"company_selected",@"purchase_selected", @"my_selected"];
     [tabBarVC.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.title = titles[idx];
+        NSLog(@"img = %@",[UIImage imageNamed:normalImages[idx]]);
         obj.image = [[UIImage imageNamed:normalImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         obj.selectedImage = [[UIImage imageNamed:highlightImages[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }];
