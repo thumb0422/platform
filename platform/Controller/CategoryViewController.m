@@ -46,6 +46,12 @@
         make.top.equalTo(self.leftTV.mas_top).offset(5);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
+    [self.leftTV reloadData];
+    NSIndexPath *indexP = [NSIndexPath indexPathForRow:0 inSection:0];
+    if ([self respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        [self.leftTV selectRowAtIndexPath:indexP animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [self tableView:self.leftTV didSelectRowAtIndexPath:indexP];
+    }
 }
 
 - (UITableView *)leftTV{
@@ -128,6 +134,11 @@
     CategoryContentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryContentCell" forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:[contentDatas objectAtIndex:indexPath.row]];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *dtlVC = SelfSBVC(@"Detail", @"ProductDetailViewController");
+    [self.navigationController pushViewController:dtlVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

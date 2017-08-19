@@ -14,7 +14,7 @@
 #import "HomeTopBottomTableViewCell.h"
 #import "HomeCompsiteTableViewCell.h"
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>{
     NSArray *_identifyArray;
     NSArray *_rowHeightArray;
 }
