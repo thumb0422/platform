@@ -23,8 +23,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     BaseNavController *homeNav     = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"HomeViewController")];
-    
-//    BaseNavController *companyNav  = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CompanyInfoViewController")];
     BaseNavController *categoryNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"CategoryViewController") alloc] init]];
     BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"PurchaseViewController") alloc] init]];
     BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"MyCenterViewController")];
