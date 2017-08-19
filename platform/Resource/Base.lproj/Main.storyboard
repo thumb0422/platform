@@ -40,24 +40,6 @@
             </objects>
             <point key="canvasLocation" x="-1238" y="61"/>
         </scene>
-        <!--Purchase-->
-        <scene sceneID="D0S-af-MOW">
-            <objects>
-                <viewController storyboardIdentifier="PurchaseViewController" title="Purchase" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oSb-VH-Um7" customClass="PurchaseViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0JE-zt-4wn"/>
-                        <viewControllerLayoutGuide type="bottom" id="flm-UZ-gSN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I6H-4z-wDa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3oB-A8-pys" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-780" y="61"/>
-        </scene>
         <!--CompanyInfo-->
         <scene sceneID="bji-na-puH">
             <objects>
