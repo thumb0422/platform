@@ -25,7 +25,7 @@
     BaseNavController *homeNav     = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"HomeViewController")];
     
 //    BaseNavController *companyNav  = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CompanyInfoViewController")];
-    BaseNavController *categoryNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"CategoryViewController")];
+    BaseNavController *categoryNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"CategoryViewController") alloc] init]];
     BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"PurchaseViewController")];
     BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"MyCenterViewController")];
     
