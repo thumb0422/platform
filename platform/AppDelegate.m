@@ -62,8 +62,8 @@
 - (void)setTabBarItems:(UITabBarController*)tabBarVC
 {
     NSArray *titles = @[@"首页", @"分类", @"购物车",@"我的"];
-    NSArray *normalImages = @[@"home_normal", @"company_normal",@"purchase_normal", @"my_normal"];
-    NSArray *highlightImages = @[@"home_selected", @"company_selected",@"purchase_selected", @"my_selected"];
+    NSArray *normalImages = @[@"home_normal", @"category_normal",@"purchase_normal", @"my_normal"];
+    NSArray *highlightImages = @[@"home_selected", @"category_selected",@"purchase_selected", @"my_selected"];
     [tabBarVC.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.title = titles[idx];
         NSLog(@"img = %@",[UIImage imageNamed:normalImages[idx]]);
