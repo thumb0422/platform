@@ -86,7 +86,8 @@
         cell = (HomeHeaderCell *)cell;
         cell.cellClickBlock = ^(ProductInfoModel *data) {
             dataModel = data;
-            UIViewController *dtlVC = SelfSBVC(@"Detail", @"ProductDetailViewController");
+            UIViewController *dtlVC = [[NSClassFromString(@"ProductDetailViewController") alloc] init];
+            dtlVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:dtlVC animated:YES];
         };
     }else if (indexPath.row == 1){

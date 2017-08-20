@@ -137,7 +137,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *dtlVC = SelfSBVC(@"Detail", @"ProductDetailViewController");
+    UIViewController *dtlVC = [[NSClassFromString(@"ProductDetailViewController") alloc] init];
+    dtlVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:dtlVC animated:YES];
 }
 

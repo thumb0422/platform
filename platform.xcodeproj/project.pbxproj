@@ -13,9 +13,7 @@
 		9A1DE3561F4260A9006927D0 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */; };
 		9A1DE3591F4265CB006927D0 /* UISearchBar+PF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */; };
 		9A1F5B9D1F01D2E900525E5C /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */; };
-		9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */; };
 		9A1F5BA31F01D32400525E5C /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */; };
-		9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A31C8D51F2F605300DA8604 /* Detail.storyboard */; };
 		9A31C8E01F2FEEF000DA8604 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */; };
 		9A3969F31F3717F1004B597B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3969F21F3717F1004B597B /* Login.storyboard */; };
 		9A4154271F45DF6C00C02D3D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4154261F45DF6C00C02D3D /* CategoryViewController.m */; };
@@ -83,11 +81,8 @@
 		9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+PF.m"; sourceTree = "<group>"; };
 		9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
-		9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompanyInfoViewController.h; sourceTree = "<group>"; };
-		9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyInfoViewController.m; sourceTree = "<group>"; };
 		9A1F5BA11F01D32400525E5C /* MyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
 		9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
-		9A31C8D51F2F605300DA8604 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		9A31C8DE1F2FEEF000DA8604 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9A31C8DF1F2FEEF000DA8604 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9A3969F21F3717F1004B597B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -218,8 +213,6 @@
 				9A4154261F45DF6C00C02D3D /* CategoryViewController.m */,
 				9A1F5B9B1F01D2E900525E5C /* PurchaseViewController.h */,
 				9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */,
-				9A1F5B9E1F01D31900525E5C /* CompanyInfoViewController.h */,
-				9A1F5B9F1F01D31900525E5C /* CompanyInfoViewController.m */,
 				9A1F5BA11F01D32400525E5C /* MyCenterViewController.h */,
 				9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */,
 			);
@@ -275,7 +268,6 @@
 				9AC8CA961F007F1300E11E3C /* Assets.xcassets */,
 				9AC8CA931F007F1300E11E3C /* Main.storyboard */,
 				9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */,
-				9A31C8D51F2F605300DA8604 /* Detail.storyboard */,
 				9A3969F21F3717F1004B597B /* Login.storyboard */,
 			);
 			path = Resource;
@@ -508,7 +500,6 @@
 				9A4154301F47B59200C02D3D /* Test.xib in Resources */,
 				9AFF3B431F1CEC1900100916 /* HomeCompsiteTableViewCell.xib in Resources */,
 				9AACF4501F17C1B500054505 /* HomeHeaderCell.xib in Resources */,
-				9A31C8D61F2F605300DA8604 /* Detail.storyboard in Resources */,
 				9AACF44B1F17C0D500054505 /* HomeCollectionCell.xib in Resources */,
 				9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */,
 				9AACF4601F1A209000054505 /* HomeTopBottomTableViewCell.xib in Resources */,
@@ -592,7 +583,6 @@
 				9AACF4A01F1A5C8200054505 /* UIView+Utils.m in Sources */,
 				9AACF4A61F1B266B00054505 /* ProductInfoModel.m in Sources */,
 				9A4C92A31F44969B006AC942 /* UserManager.m in Sources */,
-				9A1F5BA01F01D31900525E5C /* CompanyInfoViewController.m in Sources */,
 				9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */,
 				9AACF45F1F1A209000054505 /* HomeTopBottomTableViewCell.m in Sources */,
 				9AA70D101F37493100FCC1F5 /* RegistViewController.m in Sources */,

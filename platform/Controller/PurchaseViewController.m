@@ -25,7 +25,7 @@
     if (!_segmentCtrl){
         float topHeight = 20.0f;
         _segmentCtrl = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, topHeight, SCREEN_WIDTH, NAV_HEIGHT - topHeight)];
-        _segmentCtrl.sectionTitles = @[@"全部",@"待确认",@"待付款",@"待发货",@"待收获"];
+        _segmentCtrl.sectionTitles = @[@"全部",@"待付款",@"待发货",@"待收货"];
         _segmentCtrl.selectedSegmentIndex = 0;
         _segmentCtrl.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1];
         _segmentCtrl.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
