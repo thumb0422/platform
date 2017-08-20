@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyCenterViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *topView;
-@property (weak, nonatomic) IBOutlet UIImageView *topImgView;
-@property (weak, nonatomic) IBOutlet UITableView *mainTV;
 
 @end

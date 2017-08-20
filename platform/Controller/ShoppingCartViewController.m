@@ -10,6 +10,8 @@
 
 @interface ShoppingCartViewController ()
 
+@property (nonatomic,strong) UITableView *tv;
+@property (nonatomic,strong) UIView *bottomView;
 @end
 
 @implementation ShoppingCartViewController
@@ -17,15 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"购物车";
-}
-
-- (void)initNav{
-    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(rightBarClick)];
-    self.navigationItem.rightBarButtonItem = rightBar;
-}
-
-- (void)rightBarClick {
-    
 }
 
 - (void)didReceiveMemoryWarning {
