@@ -24,7 +24,7 @@
     
     BaseNavController *homeNav     = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"HomeViewController")];
     BaseNavController *categoryNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"CategoryViewController") alloc] init]];
-    BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"PurchaseViewController") alloc] init]];
+    BaseNavController *purchaseNav = [[BaseNavController alloc] initWithRootViewController:[[NSClassFromString(@"ShoppingCartViewController") alloc] init]];
     BaseNavController *myCenterNav = [[BaseNavController alloc] initWithRootViewController:SelfSBVC(@"Main", @"MyCenterViewController")];
     
     UITabBarController *tabVC = [[UITabBarController alloc] init];

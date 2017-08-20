@@ -27,6 +27,8 @@
 - (void)leftBarClick{
     if (self.navigationController.viewControllers.count > 0){
         [self.navigationController popViewControllerAnimated:YES];
+    }else {
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1ECCEF903F1B44F5087B76F9 /* libPods-platform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962AC8589D09D31610A226BA /* libPods-platform.a */; };
 		6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8697EF1F0F7C66004ABF92 /* RFLayout.m */; };
+		9A079FDD1F49411C00EAD283 /* ShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A079FDC1F49411C00EAD283 /* ShoppingCartViewController.m */; };
 		9A1DE3531F41DDE3006927D0 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */; };
 		9A1DE3561F4260A9006927D0 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3551F4260A8006927D0 /* UIImage+Utility.m */; };
 		9A1DE3591F4265CB006927D0 /* UISearchBar+PF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DE3581F4265CB006927D0 /* UISearchBar+PF.m */; };
@@ -72,6 +73,8 @@
 		6C8697EE1F0F7C66004ABF92 /* RFLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFLayout.h; sourceTree = "<group>"; };
 		6C8697EF1F0F7C66004ABF92 /* RFLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFLayout.m; sourceTree = "<group>"; };
 		962AC8589D09D31610A226BA /* libPods-platform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-platform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A079FDB1F49411C00EAD283 /* ShoppingCartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartViewController.h; sourceTree = "<group>"; };
+		9A079FDC1F49411C00EAD283 /* ShoppingCartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartViewController.m; sourceTree = "<group>"; };
 		9A156199DA1F3D027ACBFD50 /* Pods-platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-platform/Pods-platform.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1DE3511F41DDD5006927D0 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		9A1DE3521F41DDD5006927D0 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				9A1F5B9C1F01D2E900525E5C /* PurchaseViewController.m */,
 				9A1F5BA11F01D32400525E5C /* MyCenterViewController.h */,
 				9A1F5BA21F01D32400525E5C /* MyCenterViewController.m */,
+				9A079FDB1F49411C00EAD283 /* ShoppingCartViewController.h */,
+				9A079FDC1F49411C00EAD283 /* ShoppingCartViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 				9AE0DAFF1F4044AB00925A9A /* ProductDetailViewController.m in Sources */,
 				9AC8CA8C1F007F1300E11E3C /* AppDelegate.m in Sources */,
 				9A4C929D1F4487DC006AC942 /* SettingViewController.m in Sources */,
+				9A079FDD1F49411C00EAD283 /* ShoppingCartViewController.m in Sources */,
 				9A41542E1F472D0200C02D3D /* CategoryContentCell.m in Sources */,
 				9AFF3B421F1CEC1900100916 /* HomeCompsiteTableViewCell.m in Sources */,
 				9A1DE3531F41DDE3006927D0 /* UINavigationBar+Awesome.m in Sources */,
@@ -782,6 +788,7 @@
 			baseConfigurationReference = 9A156199DA1F3D027ACBFD50 /* Pods-platform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MB5N7U28ZR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -802,6 +809,7 @@
 			baseConfigurationReference = B31DF425355399C49A90FE24 /* Pods-platform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = MB5N7U28ZR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
