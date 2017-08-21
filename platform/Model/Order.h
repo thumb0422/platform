@@ -23,7 +23,7 @@ RLM_ARRAY_TYPE(OrderDetail)
 @interface OrderMain : RLMObject
 @property NSString *orderId;//订单号
 @property float amout;//金额
-@property RLMArray <OrderDetail> *details;//明细
+@property RLMArray <OrderDetail *><OrderDetail> *details;//明细
 @property Address *address;//邮寄地址id
 @property NSString *trackingNo;//快递单号
 @property BOOL isValid;//是否有效(未被删除)
