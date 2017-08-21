@@ -48,6 +48,8 @@
 		9AC8CA971F007F1300E11E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA961F007F1300E11E3C /* Assets.xcassets */; };
 		9AC8CA9A1F007F1300E11E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC8CA981F007F1300E11E3C /* LaunchScreen.storyboard */; };
 		9AC8CA9D1F007F1300E11E3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC8CA9C1F007F1300E11E3C /* main.m */; };
+		9AD6F1C11F4B13BC00445432 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6F1C01F4B13BC00445432 /* Order.m */; };
+		9AD6F1C41F4B15A800445432 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6F1C31F4B15A800445432 /* Address.m */; };
 		9ADDA9141F35494D0060FA66 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9121F35494D0060FA66 /* BaseNavController.m */; };
 		9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA9171F354AD10060FA66 /* BaseViewController.m */; };
 		9ADDA91C1F35CDB00060FA66 /* UnLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADDA91B1F35CDB00060FA66 /* UnLoginView.m */; };
@@ -146,6 +148,10 @@
 		9AC8CA9B1F007F1300E11E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AC8CA9C1F007F1300E11E3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9AD2F6101F320EAD00D6D85F /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
+		9AD6F1BF1F4B13BC00445432 /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		9AD6F1C01F4B13BC00445432 /* Order.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		9AD6F1C21F4B15A800445432 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		9AD6F1C31F4B15A800445432 /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		9ADDA9111F35494D0060FA66 /* BaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
 		9ADDA9121F35494D0060FA66 /* BaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavController.m; sourceTree = "<group>"; };
 		9ADDA9161F354AD10060FA66 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -263,6 +269,10 @@
 				9AE0DAFB1F3F0D7B00925A9A /* AccountInfo.m */,
 				9A4C929E1F44962D006AC942 /* UserModel.h */,
 				9A4C929F1F44962D006AC942 /* UserModel.m */,
+				9AD6F1BF1F4B13BC00445432 /* Order.h */,
+				9AD6F1C01F4B13BC00445432 /* Order.m */,
+				9AD6F1C21F4B15A800445432 /* Address.h */,
+				9AD6F1C31F4B15A800445432 /* Address.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,6 +620,7 @@
 				9AE0DAFC1F3F0D7B00925A9A /* AccountInfo.m in Sources */,
 				9AA70D131F375DF400FCC1F5 /* DBManager.m in Sources */,
 				9A4C92A01F44962D006AC942 /* UserModel.m in Sources */,
+				9AD6F1C41F4B15A800445432 /* Address.m in Sources */,
 				9AACF4591F1A1ECE00054505 /* HomeImageTableViewCell.m in Sources */,
 				9AACF4641F1A26D900054505 /* HomeCollectionTableViewCell.m in Sources */,
 				6C8697F01F0F7C66004ABF92 /* RFLayout.m in Sources */,
@@ -617,6 +628,7 @@
 				9A1DE3591F4265CB006927D0 /* UISearchBar+PF.m in Sources */,
 				9AACF4461F17B8B900054505 /* HomeViewController.m in Sources */,
 				9AACF4A31F1A5D7C00054505 /* BaseTableViewCell.m in Sources */,
+				9AD6F1C11F4B13BC00445432 /* Order.m in Sources */,
 				9ADDA9181F354AD10060FA66 /* BaseViewController.m in Sources */,
 				9A4C92A61F450989006AC942 /* ResetPWDViewController.m in Sources */,
 				9AACF44F1F17C1B500054505 /* HomeHeaderCell.m in Sources */,
